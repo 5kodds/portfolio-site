@@ -1,0 +1,36 @@
+name: Build HQ portrait asset
+
+on:
+  push:
+    branches:
+      - personal-brand-v1
+    paths:
+      - 'assets/portrait-hq-*.txt'
+      - '.github/workflows/build-portrait.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v4
+        with:
+          ref: personal-brand-v1
+
+      - name: Assemble portrait
+        run: |
+          cat assets/portrait-hq-0.txt assets/portrait-hq-1.txt assets/portrait-hq-2.txt assets/portrait-hq-3.txt | base64 -d > assets/olaseni-profile-hq.webp
+          file assets/olaseni-profile-hq.webp
+          ls -lh assets/olaseni-profile-hq.webp
+
+      - name: Commit generated portrait
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/olaseni-profile-hq.webp
+          git diff --cached --quiet && exit 0
+          git commit -m "Generate HQ hero portrait asset"
+          git push origin personal-brand-v1
