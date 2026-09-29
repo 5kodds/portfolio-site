@@ -1,27 +1,34 @@
 document.documentElement.classList.add('js');
 
-(async () => {
-  const portrait = document.querySelector('.hero-portrait img');
-  if (!portrait) return;
+const toggle = document.querySelector('.menu-toggle');
+const mobileNav = document.querySelector('.mobile-nav');
 
-  try {
-    const urls = [
-      'assets/portrait-hd/part1.txt',
-      'assets/portrait-hd/part2.txt',
-      'assets/portrait-hd/part3.txt',
-      'assets/portrait-hd/part4.txt'
-    ];
+function closeMenu() {
+  if (!toggle || !mobileNav) return;
+  toggle.setAttribute('aria-expanded', 'false');
+  toggle.setAttribute('aria-label', 'Open navigation');
+  mobileNav.classList.remove('open');
+  document.body.classList.remove('menu-open');
+}
 
-    const parts = await Promise.all(
-      urls.map(async (url) => {
-        const response = await fetch(url, { cache: 'no-store' });
-        if (!response.ok) throw new Error('Portrait asset failed: ' + url);
-        return response.text();
-      })
-    );
+if (toggle && mobileNav) {
+  toggle.addEventListener('click', () => {
+    const open = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!open));
+    toggle.setAttribute('aria-label', open ? 'Open navigation' : 'Close navigation');
+    mobileNav.classList.toggle('open', !open);
+    document.body.classList.toggle('menu-open', !open);
+  });
 
-    portrait.src = 'data:image/webp;base64,' + parts.join('').replace(/\s+/g, '');
-  } catch (error) {
-    console.warn('HD portrait fallback in use', error);
-  }
-})();
+  mobileNav.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', closeMenu);
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 820) closeMenu();
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') closeMenu();
+  });
+}
