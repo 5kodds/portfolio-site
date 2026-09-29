@@ -38,7 +38,7 @@ if (toggle && mobileNav) {
   Add the GA4 Measurement ID once the Google Analytics property is created.
   Example format: G-XXXXXXXXXX
 */
-const GA_MEASUREMENT_ID = '';
+const GA_MEASUREMENT_ID = 'G-HFV3BEYPBZ';
 
 function loadGoogleAnalytics(measurementId) {
   if (!measurementId || !measurementId.startsWith('G-')) return;
