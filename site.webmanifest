@@ -6,6 +6,13 @@
   "display": "standalone",
   "background_color": "#F5F2EA",
   "theme_color": "#F5F2EA",
-  "description": "Olaseni Otusanya, builder, product thinker and entrepreneur.",
-  "icons": []
+  "description": "Olaseni Otusanya — builder, product thinker and entrepreneur working across AI, business, infrastructure and human agency.",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
 }
