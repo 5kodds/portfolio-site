@@ -2,6 +2,8 @@
 
 Personal website for Olaseni Otusanya.
 
+**Live domain:** https://olaseniotusanya.site
+
 **Positioning:** Builder, Product Thinker & Entrepreneur  
 **Focus:** AI × Business × Real Economy  
 **Working principle:** Build what matters. Understand what changes.
