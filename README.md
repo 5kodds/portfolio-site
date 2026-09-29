@@ -1,4 +1,4 @@
-# Olaseni Otusanya — Personal Site
+# Olaseni Otusanya: Personal Site
 
 Personal website for Olaseni Otusanya.
 
@@ -10,9 +10,9 @@ Personal website for Olaseni Otusanya.
 
 ## Current work
 
-- **Unabdicated** — book on judgment, agency and the human mind in the age of AI
-- **PolicyPilot** — AI-assisted policy analysis prototype
-- **Treeinapool** — digital growth and local-visibility studio
+- **Unabdicated**: book on judgment, agency and the human mind in the age of AI
+- **PolicyPilot**: AI-assisted policy analysis prototype
+- **Treeinapool**: digital growth and local-visibility studio
 
 ## Deployment
 
