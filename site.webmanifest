@@ -1,8 +1,8 @@
 {
   "name": "Olaseni Otusanya",
   "short_name": "Olaseni",
-  "start_url": "/portfolio-site/",
-  "scope": "/portfolio-site/",
+  "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "background_color": "#F5F2EA",
   "theme_color": "#F5F2EA",
