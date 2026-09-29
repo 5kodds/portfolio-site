@@ -1,0 +1,11 @@
+{
+  "name": "Olaseni Otusanya",
+  "short_name": "Olaseni",
+  "start_url": "/portfolio-site/",
+  "scope": "/portfolio-site/",
+  "display": "standalone",
+  "background_color": "#F5F2EA",
+  "theme_color": "#F5F2EA",
+  "description": "Olaseni Otusanya — builder, product thinker and entrepreneur.",
+  "icons": []
+}
