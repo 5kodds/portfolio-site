@@ -1,7 +1,7 @@
 (function () {
   const PAYMENT_API = "https://unabdicated-payments.theolaseni.workers.dev";
   const USD_UNIT_PRICE = 3.69;
-  const NGN_UNIT_PRICE = 4907.15;
+  const NGN_UNIT_PRICE = 5020;
 
   const state = { mode: "self", format: "ebook", giftQty: 1, sponsorQty: 5 };
   const prices = { ebook: USD_UNIT_PRICE, paperback: 14.99 };
@@ -93,9 +93,9 @@
       state.mode === "self" ? "Your pre-order" : state.mode === "gift" ? "Your gift order" : "Your sponsorship";
     document.getElementById("summaryTotal").textContent = "US$" + total + (state.format === "paperback" ? "*" : "");
 
-    const cryptoEligible = state.mode === "self" && state.format === "ebook";
+    const cryptoEligible = state.mode === "self" && state.format === "ebook" && q === 1;
     cryptoCheckout.classList.toggle("hide", !cryptoEligible);
-    cryptoUnavailable.classList.toggle("hide", cryptoEligible);
+    cryptoUnavailable.classList.toggle("hide", cryptoEligible || state.format !== "ebook");
 
     if (state.format === "ebook") {
       checkoutButton.disabled = false;
