@@ -8,7 +8,7 @@
   <meta name="robots" content="noindex,nofollow" />
   <meta name="author" content="Olaseni Otusanya" />
   <meta property="og:title" content="UNABDICATED — Pre-order" />
-  <meta property="og:description" content="Buy for yourself, gift copies, or sponsor readers. Crypto checkout is live via NOWPayments while card and local payment rails are being activated." />
+  <meta property="og:description" content="Pre-order UNABDICATED with Paystack or crypto. Buy for yourself, gift copies, or sponsor readers." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://olaseniotusanya.site/unabdicated/preorder/" />
   <link rel="canonical" href="https://olaseniotusanya.site/unabdicated/preorder/" />
@@ -104,6 +104,7 @@
     .crypto-frame-shell iframe{display:block;width:100%;max-width:410px;height:696px;border:0;background:#fff}
     .crypto-caption{font:500 11px/1.55 ui-sans-serif,system-ui,sans-serif;color:#bdb6ab;margin:12px 0 0}
     .crypto-warning{font:600 11px/1.5 ui-sans-serif,system-ui,sans-serif;color:#efd5c5;background:rgba(184,92,46,.12);border:1px solid rgba(184,92,46,.32);border-radius:11px;padding:11px;margin-top:12px}
+    .checkout-btn:disabled{cursor:not-allowed;opacity:.6}
     .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:70px}
     .why-card{border-top:1px solid var(--line);padding:22px 2px 4px}
     .why-card span{font:700 11px/1 ui-sans-serif,system-ui,sans-serif;color:var(--rust);letter-spacing:.14em}
@@ -170,7 +171,7 @@
         <div class="launch-strip">
           <span class="launch-pill live">Launches 12 November 2026</span>
           <span class="launch-pill">Digital pre-order US$3.69</span>
-          <span class="launch-pill live">Crypto payments live</span>
+          <span class="launch-pill live">Paystack + crypto live</span>
         </div>
       </div>
       <div class="book-stage" aria-label="UNABDICATED cover concept">
@@ -231,7 +232,7 @@
             <div class="field"><label for="buyerName">Your name</label><input id="buyerName" placeholder="Olaseni Otusanya" autocomplete="name"></div>
             <div class="field"><label for="buyerEmail">Your email</label><input id="buyerEmail" type="email" placeholder="you@example.com" autocomplete="email"></div>
           </div>
-          <div class="context-note">Crypto payment is live for one Digital eBook via NOWPayments. Card, bank and local payment rails are still being activated.</div>
+          <div class="context-note">Paystack and crypto payments are live for the Digital eBook. Payment credentials are handled by the payment providers, not stored in this website.</div>
         </div>
 
         <div id="giftFlow" class="panel hide" style="margin-top:18px">
@@ -275,7 +276,7 @@
           <details><summary>What happens when I gift a paperback?</summary><p>The recipient receives a secure claim link by email and uses it to provide or confirm delivery details. This lets you give a physical book without needing the recipient's postal address at checkout.</p></details>
           <details><summary>Can I gift more than one copy?</summary><p>Yes. Multiple gifting is built into the checkout. Each copy has its own recipient and fulfilment entitlement.</p></details>
           <details><summary>How does sponsoring readers work?</summary><p>You choose the exact number of readers. Each sponsored reader corresponds to one entitlement. Allocation and delivery will be tracked after payment rather than assumed at checkout.</p></details>
-          <details><summary>Which payment methods are live?</summary><p>Crypto payment is live now through NOWPayments for one Digital eBook at US$3.69. Card, bank and local payment methods are still being activated. Gift, sponsorship and multi-copy crypto orders will use dynamic invoices once the payment API is connected.</p></details>
+          <details><summary>Which payment methods are live?</summary><p>Paystack is live for card, bank and other methods available through Paystack, and crypto is live through NOWPayments for one Digital eBook. Additional payment options will be added as they are approved.</p></details>
         </section>
       </div>
 
@@ -293,31 +294,20 @@
             <span class="crypto-live-tag">Live now</span>
           </div>
           <div class="crypto-frame-shell">
-            <iframe
-              title="Pay for UNABDICATED with crypto via NOWPayments"
-              src="https://nowpayments.io/embeds/payment-widget?iid=5760943937"
-              width="410"
-              height="696"
-              frameborder="0"
-              scrolling="no"
-              loading="lazy"
-              referrerpolicy="strict-origin-when-cross-origin"
-              style="overflow-y:hidden;">
-              Can't load widget
-            </iframe>
+            <iframe title="Pay for UNABDICATED with crypto via NOWPayments" src="https://nowpayments.io/embeds/payment-widget?iid=5760943937" width="410" height="696" frameborder="0" scrolling="no" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" style="overflow-y:hidden;">Can't load widget</iframe>
           </div>
           <p class="crypto-caption">Processed securely by NOWPayments. This live widget is configured for one Digital eBook at US$3.69.</p>
         </div>
-        <div class="crypto-warning hide" id="cryptoUnavailable">The embedded crypto invoice is currently for one Digital eBook only. Multi-copy, gift, sponsor and paperback crypto orders will be enabled with dynamic invoices when the NOWPayments API is connected.</div>
-        <button class="checkout-btn" id="checkoutButton" type="button">Preview card / local checkout</button>
-        <p class="secure-note">Crypto is live. Card, bank and local payment rails are still in activation.</p>
+        <div class="crypto-warning hide" id="cryptoUnavailable">The embedded crypto invoice is currently for one Digital eBook only. Use Paystack for gift, sponsor or multi-copy orders.</div>
+        <button class="checkout-btn" id="checkoutButton" type="button">Pay with Paystack · ₦4,907.15</button>
+        <p class="secure-note">Paystack checkout is initialized through the Cloudflare payment API and confirmed server-side by webhook.</p>
         <div class="provider-row">
-          <div class="provider">LEMON SQUEEZY</div>
+          <div class="provider live-provider">PAYSTACK · LIVE</div>
           <div class="provider live-provider">NOWPAYMENTS · LIVE</div>
-          <div class="provider">FLUTTERWAVE</div>
-          <div class="provider">OPAY</div>
+          <div class="provider">OPAY · PENDING</div>
+          <div class="provider">MORE OPTIONS · SOON</div>
         </div>
-        <div class="preview-ribbon">CRYPTO LIVE — other payment rails remain in preview until provider activation is completed.</div>
+        <div class="preview-ribbon">PAYSTACK + CRYPTO LIVE — OPay and additional payment options will be added as they are approved.</div>
       </aside>
     </section>
   </main>
@@ -325,8 +315,8 @@
   <div class="modal" id="previewModal" role="dialog" aria-modal="true" aria-labelledby="previewTitle">
     <div class="modal-card">
       <div class="section-num">Checkout preview</div>
-      <h2 id="previewTitle">Card and local payment rails are still being activated.</h2>
-      <p id="modalCopy">Crypto is already available through NOWPayments for one Digital eBook. This preview button represents the remaining card and local payment routes, which will be connected server-side after provider verification.</p>
+      <h2 id="previewTitle">Secure checkout is live.</h2>
+      <p id="modalCopy">Paystack checkout is initialized through the Cloudflare Worker and successful payments are confirmed by webhook before fulfilment.</p>
       <button id="closeModal" type="button">Back to checkout</button>
     </div>
   </div>
@@ -337,135 +327,6 @@
   </footer>
 
   <script src="/script.js?v=20260929-7"></script>
-  <script>
-    (function(){
-      const state={mode:'self',format:'ebook',giftQty:1,sponsorQty:5};
-      const prices={ebook:3.69,paperback:14.99};
-      const modeLabels={self:'For myself',gift:'Gift copies',sponsor:'Sponsor readers'};
-      const formatLabels={ebook:'Digital eBook',paperback:'Paperback'};
-
-      const modeButtons=[...document.querySelectorAll('[data-mode]')];
-      const formatCards=[...document.querySelectorAll('[data-format]')];
-      const selfFlow=document.getElementById('selfFlow');
-      const giftFlow=document.getElementById('giftFlow');
-      const sponsorFlow=document.getElementById('sponsorFlow');
-      const giftQty=document.getElementById('giftQty');
-      const sponsorQty=document.getElementById('sponsorQty');
-      const giftRecipients=document.getElementById('giftRecipients');
-      const giftNote=document.getElementById('giftFulfilmentNote');
-      const cryptoCheckout=document.getElementById('cryptoCheckout');
-      const cryptoUnavailable=document.getElementById('cryptoUnavailable');
-
-      function recipientTemplate(i){
-        return '<div class="recipient-card"><div class="recipient-head"><strong>Recipient '+i+'</strong><span>Gift copy</span></div><div class="field"><label for="recipientEmail'+i+'">Recipient email</label><input id="recipientEmail'+i+'" type="email" placeholder="recipient@example.com" required></div><div class="field"><label for="recipientMessage'+i+'">Personal message <span style="font-weight:500;color:var(--muted)">(optional)</span></label><textarea id="recipientMessage'+i+'" placeholder="A note from you..."></textarea></div></div>';
-      }
-      function renderRecipients(){
-        const count=Math.max(1,Math.min(20,Number(giftQty.value)||1));
-        state.giftQty=count;
-        giftQty.value=count;
-        const previous={};
-        [...giftRecipients.querySelectorAll('input,textarea')].forEach(el=>previous[el.id]=el.value);
-        giftRecipients.innerHTML=Array.from({length:count},(_,i)=>recipientTemplate(i+1)).join('');
-        Object.keys(previous).forEach(id=>{const el=document.getElementById(id);if(el)el.value=previous[id]});
-        updateSummary();
-      }
-      function selectMode(mode){
-        state.mode=mode;
-        modeButtons.forEach(b=>b.classList.toggle('active',b.dataset.mode===mode));
-        selfFlow.classList.toggle('hide',mode!=='self');
-        giftFlow.classList.toggle('hide',mode!=='gift');
-        sponsorFlow.classList.toggle('hide',mode!=='sponsor');
-        updateSummary();
-      }
-      function selectFormat(format){
-        state.format=format;
-        formatCards.forEach(c=>c.classList.toggle('active',c.dataset.format===format));
-        giftNote.textContent=format==='ebook'
-          ? 'Digital recipients receive a secure download/access link by email after fulfilment opens.'
-          : 'Paperback recipients receive a secure claim link by email so they can provide shipping details.';
-        updateSummary();
-      }
-      function qty(){
-        if(state.mode==='gift') return state.giftQty;
-        if(state.mode==='sponsor') return state.sponsorQty;
-        return 1;
-      }
-      function updateSummary(){
-        const q=qty();
-        const total=(prices[state.format]*q).toFixed(2);
-        document.getElementById('summaryMode').textContent=modeLabels[state.mode];
-        document.getElementById('summaryFormat').textContent=formatLabels[state.format];
-        document.getElementById('summaryQty').textContent=q;
-        document.getElementById('qtyLabel').textContent=state.mode==='sponsor'?'Readers sponsored':'Quantity';
-        document.getElementById('summaryHeading').textContent=state.mode==='self'?'Your pre-order':state.mode==='gift'?'Your gift order':'Your sponsorship';
-        document.getElementById('summaryTotal').textContent='US
-
-      modeButtons.forEach(btn=>btn.addEventListener('click',()=>selectMode(btn.dataset.mode)));
-      formatCards.forEach(card=>{
-        card.addEventListener('click',()=>selectFormat(card.dataset.format));
-        card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();selectFormat(card.dataset.format)}});
-      });
-      giftQty.addEventListener('input',renderRecipients);
-      sponsorQty.addEventListener('input',()=>{
-        state.sponsorQty=Math.max(1,Math.min(10000,Number(sponsorQty.value)||1));
-        updateSummary();
-      });
-
-      const modal=document.getElementById('previewModal');
-      document.getElementById('checkoutButton').addEventListener('click',()=>{
-        const q=qty();
-        document.getElementById('modalCopy').textContent=
-          state.mode==='sponsor'
-          ? 'This preview would create '+q+' sponsorship entitlement'+(q===1?'':'s')+' after verified payment. Once the provider keys are available, checkout will happen server-side and fulfilment will be triggered only by a verified payment callback.'
-          : state.mode==='gift'
-          ? 'This preview is ready for '+q+' gift cop'+(q===1?'y':'ies')+'. When payments are connected, each paid copy will receive its own fulfilment entitlement and recipient email.'
-          : 'Crypto is already live through NOWPayments for one Digital eBook. This preview represents the card and local payment routes that will be connected server-side after provider verification.';
-        modal.classList.add('open');
-      });
-      document.getElementById('closeModal').addEventListener('click',()=>modal.classList.remove('open'));
-      modal.addEventListener('click',e=>{if(e.target===modal)modal.classList.remove('open')});
-      document.addEventListener('keydown',e=>{if(e.key==='Escape')modal.classList.remove('open')});
-
-      renderRecipients();
-      updateSummary();
-    })();
-  </script>
-</body>
-</html>+total+(state.format==='paperback'?'*':'');
-        const cryptoEligible=state.mode==='self' && state.format==='ebook';
-        cryptoCheckout.classList.toggle('hide',!cryptoEligible);
-        cryptoUnavailable.classList.toggle('hide',cryptoEligible);
-      }
-
-      modeButtons.forEach(btn=>btn.addEventListener('click',()=>selectMode(btn.dataset.mode)));
-      formatCards.forEach(card=>{
-        card.addEventListener('click',()=>selectFormat(card.dataset.format));
-        card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();selectFormat(card.dataset.format)}});
-      });
-      giftQty.addEventListener('input',renderRecipients);
-      sponsorQty.addEventListener('input',()=>{
-        state.sponsorQty=Math.max(1,Math.min(10000,Number(sponsorQty.value)||1));
-        updateSummary();
-      });
-
-      const modal=document.getElementById('previewModal');
-      document.getElementById('checkoutButton').addEventListener('click',()=>{
-        const q=qty();
-        document.getElementById('modalCopy').textContent=
-          state.mode==='sponsor'
-          ? 'This preview would create '+q+' sponsorship entitlement'+(q===1?'':'s')+' after verified payment. Once the provider keys are available, checkout will happen server-side and fulfilment will be triggered only by a verified payment callback.'
-          : state.mode==='gift'
-          ? 'This preview is ready for '+q+' gift cop'+(q===1?'y':'ies')+'. When payments are connected, each paid copy will receive its own fulfilment entitlement and recipient email.'
-          : 'Once the verified provider keys are available, this button will create the order on the server, redirect to the selected payment rail and fulfil the purchase only after a verified payment callback.';
-        modal.classList.add('open');
-      });
-      document.getElementById('closeModal').addEventListener('click',()=>modal.classList.remove('open'));
-      modal.addEventListener('click',e=>{if(e.target===modal)modal.classList.remove('open')});
-      document.addEventListener('keydown',e=>{if(e.key==='Escape')modal.classList.remove('open')});
-
-      renderRecipients();
-      updateSummary();
-    })();
-  </script>
+  <script src="/unabdicated/preorder/checkout.js?v=20261014-1"></script>
 </body>
 </html>
