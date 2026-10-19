@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#F5F2EA" /><meta name="author" content="Olaseni Otusanya" />
+<meta name="description" content="How Olaseni Otusanya designed Parfum Agente, a privacy-first fragrance discovery MVP with a 12-question quiz and rule-based Scent DNA ranking." /><meta name="robots" content="index,follow,max-image-preview:large" />
+<meta property="og:type" content="article" /><meta property="og:site_name" content="Olaseni Otusanya" />
+<meta property="og:title" content="Parfum Agente: Technical Product Case Study" /><meta property="og:description" content="How Olaseni Otusanya designed Parfum Agente, a privacy-first fragrance discovery MVP with a 12-question quiz and rule-based Scent DNA ranking." />
+<meta property="og:url" content="https://olaseniotusanya.site/portfolio/parfum-agente/" /><meta property="og:image" content="https://olaseniotusanya.site/assets/olaseni-og-1200x630.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="canonical" href="https://olaseniotusanya.site/portfolio/parfum-agente/" /><link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="/styles.css?v=20260929-6" />
+<link rel="stylesheet" href="/portfolio/portfolio.css?v=20261019" />
+<title>Parfum Agente: Technical Product Case Study | Olaseni Otusanya</title>
+</head>
+<body class="interior-page portfolio-page"><header class="site-header">
+  <a class="nameplate" href="/" aria-label="Olaseni Otusanya home">OLASENI <span>OTUSANYA</span></a>
+  <nav class="desktop-nav" aria-label="Primary navigation">
+    <a href="/about/">About</a><a href="/#building">Building</a><a href="/portfolio/" aria-current="page">Portfolio</a><a href="/writing/">Writing</a><a href="/#contact">Contact</a>
+  </nav>
+  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open navigation"><span></span><span></span></button>
+</header>
+<nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+  <a href="/about/">About</a><a href="/#building">Building</a><a href="/portfolio/">Portfolio</a><a href="/writing/">Writing</a><a href="/#contact">Contact</a>
+</nav>
+<main>
+<section class="page-hero portfolio-hero detail-hero">
+ <p class="eyebrow"><a href="/portfolio/">PORTFOLIO</a> / 02 / PRODUCT BUILDING</p>
+ <h1>Parfum Agente: designing a better way to discover your scent.</h1>
+ <p class="page-dek">A technical product case study in reducing choice overload through a structured consultation, explainable ranking and a privacy-first architecture.</p>
+ <div class="portfolio-tags"><span>PRODUCT DISCOVERY</span><span>PERSONALIZATION</span><span>RULE-BASED RECOMMENDATIONS</span><span>PROTOTYPING</span></div>
+ <div class="case-meta"><div><span>PRODUCT</span><strong>Fragrance discovery</strong></div><div><span>ROLE</span><strong>Independent product builder</strong></div><div><span>VERSION</span><strong>V2.3</strong></div><div><span>MATURITY</span><strong>Testable beta, not validated at scale</strong></div></div>
+ <div class="actions"><a class="button primary" href="https://5kodds.github.io/parfum-agente/" target="_blank" rel="noopener noreferrer">Explore live prototype ↗</a><a class="button" href="https://github.com/5kodds/parfum-agente" target="_blank" rel="noopener noreferrer">View source code ↗</a></div>
+</section>
+<section class="page-body case-narrative">
+ <div class="section-kicker"><span>01</span> THE PRODUCT HYPOTHESIS</div>
+ <div class="case-split"><h2>Fragrance choice is personal, but discovery is often a wall of products.</h2><div class="case-copy">
+ <p>Shoppers are asked to choose among brands, notes, seasons, occasions and unfamiliar fragrance families. My hypothesis was that a short, thoughtful consultation could translate personal preferences into useful discovery guidance before a customer knew specific perfume names.</p>
+ <p>The product promise was simple: <strong>Your scent, translated.</strong> The key design question became how to make recommendations understandable and testable instead of presenting unexplained scores as certainty.</p>
+ </div></div>
+</section>
+<section class="page-body case-narrative">
+ <div class="section-kicker"><span>02</span> THE MVP DECISIONS</div>
+ <div class="case-steps">
+ <article><span class="step-index">01</span><div><h3>Ask enough to learn, but not enough to exhaust.</h3><p>The consultation uses 12 questions to capture preference signals. Users can move backward, see progress, retry and view the result rather than navigating a traditional product catalog first.</p></div></article>
+ <article><span class="step-index">02</span><div><h3>Translate answers into a usable preference model.</h3><p>A six-dimensional Scent DNA and an archetype make the preference profile explicit. The local engine combines preference dimensions with fragrance notes, families, occasions and exploration signals to rank matches.</p></div></article>
+ <article><span class="step-index">03</span><div><h3>Choose explainable rules before a trained model.</h3><p>The current matcher is rule-based. That keeps recommendations inspectable and avoids a misleading claim that the app has a trained AI personalization model. The curated catalog currently contains 31 fragrance entries.</p></div></article>
+ <article><span class="step-index">04</span><div><h3>Keep the experience usable when data providers fail.</h3><p>The static frontend can calculate matches locally without an external API. An optional Cloudflare Worker is designed for external fragrance and commerce enrichment with keys kept off the client. Provider integration and live reliability still require deployment validation.</p></div></article>
+ </div>
+</section>
+<section class="page-body case-narrative">
+ <div class="section-kicker"><span>03</span> TRADE-OFFS &amp; ENGINEERING</div>
+ <div class="decision-grid">
+ <article><span>PRIVACY VS ANALYTICS</span><h3>Local-first by default.</h3><p>Preference scoring runs in the browser. Product analytics and privacy disclosures remain outstanding before a broader production launch.</p></article>
+ <article><span>EXPLAINABILITY VS SOPHISTICATION</span><h3>Rules before model complexity.</h3><p>A transparent scoring engine can be benchmarked with expert-reviewed profiles before investing in an opaque learning system.</p></article>
+ <article><span>FRESHNESS VS RELIABILITY</span><h3>Separate curated from live.</h3><p>Provider results need validation, normalization and provenance before their scores can be treated as equivalent to the curated catalog.</p></article>
+ </div>
+</section>
+<section class="page-body case-narrative">
+ <div class="section-kicker"><span>04</span> EVIDENCE, LIMITS &amp; NEXT EXPERIMENT</div>
+ <div class="case-split"><h2>A working recommendation experience, not yet proof of recommendation quality.</h2><div class="case-copy">
+ <p>The repository documents a functioning consultation, local recommendation logic, automated tests, a deployable static frontend and an optional provider architecture. The V2.3 roadmap explicitly describes this as a testable public beta, not a fully production-validated recommendation business.</p>
+ <p>The next test is behavioral, not visual: run moderated sessions across fragrance-experience levels, benchmark top matches against expert-reviewed profiles, measure quiz completion, and gather qualitative feedback without capturing answers by default.</p>
+ <p class="quiet">No claims of user growth, conversion lift, model accuracy or affiliate revenue are made because those results have not been established.</p>
+ <div class="source-links"><a href="https://github.com/5kodds/parfum-agente" target="_blank" rel="noopener noreferrer">Source repository ↗</a><a href="https://github.com/5kodds/parfum-agente/blob/main/docs/ROADMAP.md" target="_blank" rel="noopener noreferrer">V2.3 roadmap ↗</a><a href="https://5kodds.github.io/parfum-agente/" target="_blank" rel="noopener noreferrer">Prototype ↗</a></div>
+ </div></div>
+</section>
+<section class="page-cta"><p class="section-label">PAIR WITH A COMMERCIAL PRODUCT STORY</p><h2>Technical product judgment meets real-world product operations.</h2>
+<div class="actions"><a class="button primary" href="/portfolio/vuvu/">Read the Vuvu case study →</a><a class="button" href="/portfolio/">All case studies</a></div></section></main><footer><div><strong>OLASENI OTUSANYA</strong><p>Builder / Writer / Product Thinker</p></div><p class="footer-note">AFRICA → WORLD</p></footer><script src="/script.js?v=20260929-7"></script></body></html>
