@@ -1,0 +1,66 @@
+/* Case study portfolio, scoped to /portfolio/ */
+.portfolio-page .portfolio-hero{padding-top:clamp(4.5rem,8vh,7rem);padding-bottom:4.7rem}
+.portfolio-page .portfolio-hero h1{max-width:1180px;font-size:clamp(3.15rem,6vw,6rem);line-height:1.03}
+.portfolio-tags{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:2.3rem}
+.portfolio-tags span{font-size:.67rem;letter-spacing:.12em;font-weight:750;padding:.65rem .82rem;border:1px solid rgba(17,17,17,.28)}
+.portfolio-featured,.case-narrative{padding-top:5rem;padding-bottom:5rem}
+.case-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.2rem}
+.case-card{border:1px solid var(--line);padding:clamp(1.6rem,3vw,3rem);min-height:560px;display:flex;flex-direction:column;background:#EEEAE1}
+.case-card-featured{background:#E5E9EC}
+.case-number{font-weight:800;font-size:.69rem;letter-spacing:.2em;color:var(--blue);display:flex;gap:1.2rem;align-items:center;flex-wrap:wrap}
+.case-number span{color:#555;font-size:.66rem}
+.case-card h2{font-family:Georgia,serif;font-weight:400;font-size:clamp(3rem,5vw,5.6rem);letter-spacing:-.045em;line-height:1;margin:2.3rem 0 .4rem}
+.case-card .case-subhead{font-family:Georgia,serif;font-size:clamp(1.35rem,2vw,1.85rem);line-height:1.25;max-width:510px}
+.case-card>p:not(.case-subhead){font-size:1.05rem;color:#4b4945}
+.case-facts{display:grid;gap:1rem;margin:auto 0 2rem;padding-top:2.4rem}
+.case-facts div{display:grid;grid-template-columns:100px 1fr;border-top:1px solid var(--line);padding-top:.65rem;gap:1rem}
+.case-facts dt,.case-meta span{font-size:.66rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#555}
+.case-facts dd{margin:0;font-weight:650}
+.case-card>.text-link{margin-top:0;font-weight:750}
+.portfolio-method{background:#EDE9E1}
+.method-grid,.decision-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+.method-grid article,.decision-grid article{padding:1.5rem 0;border-top:2px solid var(--ink)}
+.method-grid article span,.decision-grid article span{font-size:.71rem;font-weight:800;letter-spacing:.14em;color:var(--blue)}
+.method-grid h3,.decision-grid h3{font-family:Georgia,serif;font-size:1.8rem;font-weight:400;line-height:1.1}
+.method-grid p,.decision-grid p{color:#555;max-width:340px}
+.case-meta{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem;margin-top:3.3rem;padding-top:1.4rem;border-top:1px solid var(--line)}
+.case-meta>div{display:flex;flex-direction:column;gap:.4rem}
+.case-meta strong{font-size:.97rem;line-height:1.35}
+.detail-hero .actions{margin-top:2.4rem}
+.case-split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:6vw}
+.case-split h2{font-family:Georgia,serif;font-weight:400;letter-spacing:-.035em;font-size:clamp(2.25rem,3.7vw,4.3rem);line-height:1.09;margin:.1rem 0}
+.case-copy{font-size:1.11rem;line-height:1.65;max-width:780px}
+.case-copy p:first-child{margin-top:0}
+.case-steps{max-width:1120px;margin-left:auto}
+.case-steps article{display:grid;grid-template-columns:92px minmax(0,1fr);gap:2rem;border-top:1px solid var(--line);padding:2rem 0}
+.step-index{font:400 2.4rem Georgia,serif;color:var(--blue)}
+.case-steps h3{font:400 clamp(1.65rem,2.8vw,2.7rem)/1.12 Georgia,serif;letter-spacing:-.02em;max-width:700px;margin:0 0 .6rem}
+.case-steps p{font-size:1.08rem;max-width:750px;margin:.5rem 0;color:#4a4945}
+.evidence-note{margin:3rem 0 0 auto;max-width:800px;padding:1.6rem;border-left:3px solid var(--blue);background:#ece8df}
+.evidence-note strong{font-size:.78rem;letter-spacing:.11em;text-transform:uppercase}
+.evidence-note p{margin:.5rem 0 0;color:#51504b}
+.source-links{display:flex;gap:1rem 2rem;flex-wrap:wrap;margin-top:1.5rem}
+.source-links a{color:var(--blue);font-weight:750;text-decoration:underline;text-underline-offset:.2em}
+.quiet{color:#62605b;font-size:.92rem}
+.portfolio-hero .eyebrow a:hover{text-decoration:underline}
+@media(max-width:900px){
+.case-grid,.case-split{grid-template-columns:1fr}
+.case-card{min-height:auto}
+.case-facts{margin:2rem 0}
+.case-meta{grid-template-columns:repeat(2,minmax(0,1fr))}
+.method-grid,.decision-grid{grid-template-columns:1fr}
+.method-grid article,.decision-grid article{padding:1.3rem 0}
+.case-steps{margin-left:0}
+}
+@media(max-width:520px){
+.portfolio-page .portfolio-hero{padding-top:3.6rem;padding-bottom:3.2rem}
+.portfolio-page .portfolio-hero h1{font-size:clamp(2.6rem,11vw,4rem)}
+.portfolio-featured,.case-narrative{padding-top:3.7rem;padding-bottom:3.7rem}
+.case-card{padding:1.55rem}
+.case-card h2{font-size:3.4rem}
+.case-facts div{grid-template-columns:80px 1fr}
+.case-meta{grid-template-columns:1fr 1fr;gap:1.4rem}
+.case-steps article{grid-template-columns:40px minmax(0,1fr);gap:.75rem;padding:1.4rem 0}
+.step-index{font-size:1.5rem}
+.case-copy,.case-steps p{font-size:1rem}
+}
