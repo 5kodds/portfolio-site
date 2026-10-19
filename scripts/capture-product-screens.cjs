@@ -29,6 +29,36 @@ const results = {};
     // The public App Store listing is used strictly as an authentic source for app UI.
     try {
       const page = await openPage('https://apps.apple.com/ng/app/vuvu/id6738325760', { wait: 5000 });
+      // Apple supplies the original high-resolution screenshots through its public iTunes Lookup API.
+      let appScreens = [];
+      for (const country of ['ng', 'us']) {
+        try {
+          const resp = await page.request.get('https://itunes.apple.com/lookup?id=6738325760&country=' + country, { timeout: 25000 });
+          if (!resp.ok()) { console.log('iTunes lookup HTTP:', resp.status()); continue; }
+          const data = await resp.json();
+          const app = (data.results || [])[0];
+          appScreens = [...(app?.screenshotUrls || []), ...(app?.ipadScreenshotUrls || [])];
+          console.log('Official iTunes screenshots:', country, appScreens.length);
+          if (appScreens.length) break;
+        } catch (e) { console.log('iTunes lookup unavailable:', e.message); }
+      }
+      let official = 0;
+      for (const sourceUrl of appScreens.slice(0, 3)) {
+        try {
+          const resp = await page.request.get(sourceUrl, { timeout: 30000 });
+          if (!resp.ok()) continue;
+          const mime = resp.headers()['content-type'] || 'image/jpeg';
+          const bytes = await resp.body();
+          const imagePage = await browser.newPage({ viewport: { width: 700, height: 1300 }, deviceScaleFactor: 2 });
+          await imagePage.setContent('<style>body{margin:0;background:#f1ede6;display:flex;justify-content:center}img{display:block;max-width:700px;max-height:1300px;object-fit:contain}</style><img src="data:' + mime + ';base64,' + bytes.toString('base64') + '">');
+          await imagePage.waitForFunction(() => document.querySelector('img').naturalWidth > 240);
+          const filename = 'vuvu-app-' + String(official + 1).padStart(2, '0') + '.png';
+          await imagePage.locator('img').screenshot({ path: path.join(out, filename), animations: 'disabled' });
+          results[filename] = true;
+          official++;
+          await imagePage.close();
+        } catch(e) { console.log('Individual iTunes screenshot unavailable:', e.message); }
+      }
       const matches = await page.locator('img').evaluateAll(images => images
         .filter(el => el.complete && el.naturalWidth > 240 && el.naturalHeight > 420 && el.naturalHeight > el.naturalWidth * 1.35)
         .map(el => ({ src: el.currentSrc || el.src, w: el.naturalWidth, h: el.naturalHeight })));
