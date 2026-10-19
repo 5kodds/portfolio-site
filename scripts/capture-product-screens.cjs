@@ -47,16 +47,14 @@ const results = {};
         try {
           const resp = await page.request.get(sourceUrl, { timeout: 30000 });
           if (!resp.ok()) continue;
-          const mime = resp.headers()['content-type'] || 'image/jpeg';
+          const mime = resp.headers()['content-type'] || 'unknown';
           const bytes = await resp.body();
-          const imagePage = await browser.newPage({ viewport: { width: 700, height: 1300 }, deviceScaleFactor: 2 });
-          await imagePage.setContent('<style>body{margin:0;background:#f1ede6;display:flex;justify-content:center}img{display:block;max-width:700px;max-height:1300px;object-fit:contain}</style><img src="data:' + mime + ';base64,' + bytes.toString('base64') + '">');
-          await imagePage.waitForFunction(() => document.querySelector('img').naturalWidth > 240);
+          console.log('Screenshot source:', mime, bytes.length, sourceUrl.slice(0, 120));
           const filename = 'vuvu-app-' + String(official + 1).padStart(2, '0') + '.png';
-          await imagePage.locator('img').screenshot({ path: path.join(out, filename), animations: 'disabled' });
+          await require('sharp')(bytes).png().toFile(path.join(out, filename));
           results[filename] = true;
           official++;
-          await imagePage.close();
+          console.log('Saved', filename);
         } catch(e) { console.log('Individual iTunes screenshot unavailable:', e.message); }
       }
       const matches = await page.locator('img').evaluateAll(images => images
