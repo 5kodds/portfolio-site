@@ -1,0 +1,72 @@
+/* Capture authentic product screens for the portfolio.
+   Runs in GitHub Actions, saving source images as local repo assets. */
+const { chromium } = require('playwright');
+const fs = require('node:fs/promises');
+const path = require('node:path');
+const out = path.resolve('portfolio/media');
+const results = {};
+(async () => {
+  await fs.mkdir(out, { recursive: true });
+  const browser = await chromium.launch({ headless: true, args: ['--no-sandbox'] });
+  try {
+    async function openPage(url, opts = {}) {
+      const page = await browser.newPage({ viewport: { width: 1500, height: 980 }, deviceScaleFactor: 2, reducedMotion: 'reduce' });
+      await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 65000 });
+      await page.waitForTimeout(opts.wait || 3000);
+      return page;
+    }
+    async function save(page, file, fullPage = false) {
+      await page.screenshot({ path: path.join(out, file), fullPage, animations: 'disabled' });
+      results[file] = true;
+      console.log('Saved', file);
+    }
+    // Vuvu's live marketing site.
+    try {
+      const page = await openPage('https://vuvu.ng/', { wait: 5000 });
+      await save(page, 'vuvu-website.png');
+      await page.close();
+    } catch (e) { console.log('Vuvu website capture unavailable:', e.message); }
+    // The public App Store listing is used strictly as an authentic source for app UI.
+    try {
+      const page = await openPage('https://apps.apple.com/ng/app/vuvu/id6738325760', { wait: 5000 });
+      const matches = await page.locator('img').evaluateAll(images => images
+        .filter(el => el.complete && el.naturalWidth > 240 && el.naturalHeight > 420 && el.naturalHeight > el.naturalWidth * 1.35)
+        .map(el => ({ src: el.currentSrc || el.src, w: el.naturalWidth, h: el.naturalHeight })));
+      console.log('Portrait image candidates from App Store:', matches.length, JSON.stringify(matches.slice(0, 5)));
+      let count = 0;
+      for (const data of matches) {
+        if (count >= 3) break;
+        const locator = page.locator('img').filter({ visible: true });
+        const images = await locator.all();
+        for (const img of images) {
+          const src = await img.evaluate(el => el.currentSrc || el.src).catch(() => '');
+          if (src !== data.src) continue;
+          const filename = 'vuvu-app-' + String(count + 1).padStart(2, '0') + '.png';
+          await img.screenshot({ path: path.join(out, filename), animations: 'disabled' });
+          results[filename] = true;
+          count++;
+          break;
+        }
+      }
+      await page.close();
+    } catch (e) { console.log('App Store capture unavailable:', e.message); }
+    // Parfum Agente live interface: home, questionnaire and recommendation result.
+    try {
+      const page = await openPage('https://5kodds.github.io/parfum-agente/', { wait: 4500 });
+      await page.locator('#app .hero').waitFor({ timeout: 15000 });
+      await save(page, 'parfum-home.png');
+      await page.getByRole('button', { name: /Discover my Scent DNA/i }).click();
+      await page.locator('.choice').first().waitFor({ timeout: 10000 });
+      await save(page, 'parfum-quiz.png');
+      for (let i = 0; i < 12; i++) {
+        await page.locator('.choice').first().click({ timeout: 10000 });
+      }
+      await page.locator('.result-header').waitFor({ timeout: 15000 });
+      await page.waitForTimeout(700);
+      await save(page, 'parfum-results.png');
+      await page.close();
+    } catch (e) { console.log('Parfum Agente capture unavailable:', e.message); }
+    if (!Object.keys(results).length) throw Error('No product screenshot could be captured.');
+    console.log('Captured files:', Object.keys(results).join(', '));
+  } finally { await browser.close(); }
+})().catch(e => { console.error(e); process.exitCode = 1; });
