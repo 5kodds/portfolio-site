@@ -1,54 +1,58 @@
-document.documentElement.classList.add('js');
-
-const toggle = document.querySelector('.menu-toggle');
-const mobileNav = document.querySelector('.mobile-nav');
-
-function closeMenu() {
-  if (!toggle || !mobileNav) return;
-  toggle.setAttribute('aria-expanded', 'false');
-  toggle.setAttribute('aria-label', 'Open navigation');
-  mobileNav.classList.remove('open');
-  document.body.classList.remove('menu-open');
-}
-
-if (toggle && mobileNav) {
-  toggle.addEventListener('click', () => {
-    const open = toggle.getAttribute('aria-expanded') === 'true';
-    toggle.setAttribute('aria-expanded', String(!open));
-    toggle.setAttribute('aria-label', open ? 'Open navigation' : 'Close navigation');
-    mobileNav.classList.toggle('open', !open);
-    document.body.classList.toggle('menu-open', !open);
-  });
-
-  mobileNav.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', closeMenu);
-  });
-
-  window.addEventListener('resize', () => {
-    if (window.innerWidth > 820) closeMenu();
-  });
-
-  document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') closeMenu();
-  });
-}
-
 /*
-  Analytics bootstrap
-  Add the GA4 Measurement ID once the Google Analytics property is created.
-  Example format: G-XXXXXXXXXX
-*/
+ * olaseniotusanya.site: light/dark mode toggle and analytics.
+ * The saved mode is applied before paint by a one-line script in each page's <head>.
+ */
+
+/* ---------- Light / dark mode (ODS data-ods-mode on <html>) ---------- */
+
+(function () {
+  const root = document.documentElement;
+  const toggles = document.querySelectorAll('[data-mode-toggle]');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+
+  function currentMode() {
+    const set = root.getAttribute('data-ods-mode');
+    if (set === 'light' || set === 'dark') return set;
+    return prefersDark.matches ? 'dark' : 'light';
+  }
+
+  function label() {
+    const next = currentMode() === 'dark' ? 'light' : 'dark';
+    toggles.forEach((button) => button.setAttribute('aria-label', 'Switch to ' + next + ' mode'));
+  }
+
+  toggles.forEach((button) => {
+    button.addEventListener('click', () => {
+      const next = currentMode() === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-ods-mode', next);
+      try {
+        localStorage.setItem('ods-mode', next);
+      } catch (error) {
+        /* Storage can be unavailable (private mode); the switch still works for this page. */
+      }
+      label();
+    });
+  });
+
+  prefersDark.addEventListener('change', label);
+  label();
+})();
+
+/* ---------- Analytics (GA4) ---------- */
+
 const GA_MEASUREMENT_ID = 'G-HFV3BEYPBZ';
 
 function loadGoogleAnalytics(measurementId) {
   if (!measurementId || !measurementId.startsWith('G-')) return;
 
   window.dataLayer = window.dataLayer || [];
-  window.gtag = function gtag(){ window.dataLayer.push(arguments); };
+  window.gtag = function gtag() {
+    window.dataLayer.push(arguments);
+  };
   window.gtag('js', new Date());
   window.gtag('config', measurementId, {
     anonymize_ip: true,
-    send_page_view: true
+    send_page_view: true,
   });
 
   const script = document.createElement('script');
@@ -85,7 +89,7 @@ document.addEventListener('click', (event) => {
   trackEvent(classifyLink(link), {
     link_url: href,
     link_text: (link.textContent || '').trim().slice(0, 100),
-    page_path: window.location.pathname
+    page_path: window.location.pathname,
   });
 });
 
@@ -93,9 +97,7 @@ document.addEventListener('submit', (event) => {
   const form = event.target;
   if (!(form instanceof HTMLFormElement)) return;
   if (form.matches('[data-newsletter-form]')) {
-    trackEvent('newsletter_signup_submit', {
-      page_path: window.location.pathname
-    });
+    trackEvent('newsletter_signup_submit', { page_path: window.location.pathname });
   }
 });
 

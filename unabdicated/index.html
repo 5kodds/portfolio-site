@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script>try{var m=localStorage.getItem('ods-mode');if(m==='light'||m==='dark')document.documentElement.setAttribute('data-ods-mode',m)}catch(e){}</script>
   <meta name="description" content="Unabdicated is Olaseni Otusanya’s book about becoming AI-native without surrendering human judgment, agency, curiosity, creativity or responsibility." />
-  <meta name="theme-color" content="#F5F2EA" />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <meta name="author" content="Olaseni Otusanya" />
   <meta property="og:title" content="Unabdicated | Judgment, Agency & AI — Olaseni Otusanya" />
@@ -28,83 +28,108 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="manifest" href="/site.webmanifest" />
   <title>Unabdicated | Judgment, Agency & AI — Olaseni Otusanya</title>
-  <link rel="stylesheet" href="/styles.css?v=20260929-6" />
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Book","name":"Unabdicated","author":{"@type":"Person","name":"Olaseni Otusanya","url":"https://olaseniotusanya.site/"},"description":"Judgment, agency and the human mind in the age of AI.","url":"https://olaseniotusanya.site/unabdicated/","bookEdition":"First edition — forthcoming 12 November 2026"}
-  </script>
+    {"@context":"https://schema.org","@type":"Book","name":"Unabdicated","author":{"@type":"Person","name":"Olaseni Otusanya","url":"https://olaseniotusanya.site/"},"description":"Judgment, agency and the human mind in the age of AI.","url":"https://olaseniotusanya.site/unabdicated/","bookEdition":"First edition — forthcoming 12 November 2026"}
+    </script>
+  <meta name="theme-color" content="#F3F2EE" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0E0F12" media="(prefers-color-scheme: dark)" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@300..700&amp;family=JetBrains+Mono:wght@400..600&amp;display=swap" />
+  <link rel="stylesheet" href="/assets/ods/ods-tokens.css?v=0.1.0" />
+  <link rel="stylesheet" href="/assets/ods/ods.min.css?v=0.1.0" />
+  <link rel="stylesheet" href="/assets/site.css?v=20261120" />
 </head>
-<body class="interior-page book-page">
+<body>
 
-  <header class="site-header">
-    <a class="nameplate" href="/" aria-label="Olaseni Otusanya home">OLASENI <span>OTUSANYA</span></a>
-    <nav class="desktop-nav" aria-label="Primary navigation">
-      <a href="/about/">About</a>
-      <a href="/#building">Building</a>
-      <a href="/#thinking">Thinking</a>
-      <a href="/writing/">Writing</a>
-      <a href="/#contact">Contact</a>
-    </nav>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open navigation">
-      <span></span><span></span>
-    </button>
-  </header>
-  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
-    <a href="/about/">About</a>
-    <a href="/#building">Building</a>
-    <a href="/#thinking">Thinking</a>
-    <a href="/writing/">Writing</a>
-    <a href="/#contact">Contact</a>
-  </nav>
-<main>
-  <section class="page-hero book-hero">
-    <p class="eyebrow">BOOK / LAUNCHING 12 NOVEMBER 2026</p>
-    <h1>Unabdicated</h1>
-    <p class="page-subtitle">Judgment, Agency, and the Human Mind in the Age of AI</p>
-    <p class="page-dek">A guide to developing an AI-native mind without surrendering the human capacities that make intelligence worth having.</p>
-  </section>
-
-  <section class="page-body two-col-story">
-    <aside>
-      <p class="section-label">THE PREMISE</p>
-      <p class="pull-quote">The danger is not that AI becomes capable. It is that humans stop deciding what capability is for.</p>
-    </aside>
-    <article class="prose">
-      <p>AI is rapidly lowering the cost of execution. Writing, coding, research, analysis, design and planning can all happen faster than they could only a few years ago. That creates extraordinary leverage, but leverage is not the same thing as wisdom.</p>
-      <p><em>Unabdicated</em> begins with a simple proposition: the more capable our tools become, the more valuable human judgment becomes. When execution is cheap, the hard questions move upstream. What should we ask? Which answer should we trust? What deserves attention? What are we willing to be responsible for?</p>
-      <p>The book is about becoming AI-native without becoming intellectually dependent. It explores how to use powerful systems while retaining curiosity, taste, context, responsibility and the ability to form intent independently.</p>
-      <p>This is not an argument against AI. It is an argument for a more demanding relationship with it, one in which machines expand human capability without quietly replacing human authorship of the goals.</p>
-    </article>
-  </section>
-
-  <section class="page-body">
-    <div class="section-kicker"><span>01</span> THE QUESTIONS</div>
-    <div class="topic-grid">
-      <article><span>INTENT</span><h2>Who chooses the objective?</h2><p>When execution becomes abundant, the quality of the goal becomes a primary constraint.</p></article>
-      <article><span>JUDGMENT</span><h2>What deserves belief?</h2><p>AI can produce answers at scale. Humans still need standards for deciding which answers deserve trust.</p></article>
-      <article><span>AGENCY</span><h2>What should remain yours?</h2><p>Convenience can become abdication when tools begin making choices we have stopped examining.</p></article>
-      <article><span>CREATIVITY</span><h2>What are you bringing?</h2><p>Originality increasingly depends on perspective, taste, synthesis and the quality of the questions behind the output.</p></article>
+<a class="ods-button site-skip" data-variant="inverse" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="site-container site-header__inner">
+    <a class="site-brand" href="/"><span class="ods-avatar" data-size="sm"><img src="/assets/olaseni-profile.jpg" alt="" width="240" height="300" /></span>Olaseni Otusanya</a>
+    <div class="site-header__end">
+      <nav class="site-nav" aria-label="Main"><a class="site-nav__item" href="/about/">About</a><a class="site-nav__item" href="/portfolio/">Work</a><a class="site-nav__item" href="/writing/">Writing</a><a class="site-nav__item" href="/unabdicated/" aria-current="page">Book</a><a class="site-nav__item" href="/#contact">Contact</a></nav>
+      <a class="ods-icon-button site-header__mail" href="mailto:olaseni.otusanya@gmail.com" aria-label="Email Olaseni"><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#mail"></use></svg></a>
+      <button class="ods-icon-button site-mode-toggle" type="button" data-mode-toggle aria-label="Switch colour mode"><svg class="site-icon-moon" width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#moon"></use></svg><svg class="site-icon-sun" width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#sun"></use></svg></button>
     </div>
-  </section>
+  </div>
+</header>
 
-  <section class="page-body">
-    <div class="section-kicker"><span>02</span> WHO IT IS FOR</div>
-    <div class="prose wide-prose">
+<main id="main">
+
+<section class="site-hero" aria-labelledby="book-title">
+  <div class="site-container site-hero__grid">
+    <div class="site-hero__copy">
+      <p class="site-overline">Book / Launching 12 November 2026</p>
+      <h1 class="site-page-title" id="book-title"><strong>Unabdicated</strong></h1>
+      <p class="site-subtitle">Judgment, Agency, and the Human Mind in the Age of AI</p>
+      <p class="site-lede">A guide to developing an AI-native mind without surrendering the human capacities that make intelligence worth having.</p>
+      <div class="site-actions"><a class="ods-button" href="/unabdicated/preorder/"><span class="ods-button__label">Preview pre-order options</span><svg class="ods-button__icon" width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#arrow-right"></use></svg></a><a class="ods-button" data-variant="secondary" href="/writing/"><span class="ods-button__label">Read related ideas</span></a></div>
+    </div>
+    <div class="site-book" aria-hidden="true">
+  <div class="site-book__cover">
+    <div><p class="site-book__title">UNABDICATED</p><p class="site-book__sub">Judgment, Agency, and the Human Mind in the Age of AI</p></div>
+    <p class="site-book__author">Olaseni Otusanya</p>
+  </div>
+</div>
+  </div>
+</section>
+<section class="site-section site-section--tight" aria-labelledby="premise">
+  <div class="site-container site-split">
+    <div class="site-split__aside site-stack site-stack--tight">
+      <p class="site-overline" id="premise">The premise</p>
+      <p class="site-subtitle">The danger is not that AI becomes capable. It is that humans stop deciding what capability is for.</p>
+    </div>
+    <div class="site-prose"><p>AI is rapidly lowering the cost of execution. Writing, coding, research, analysis, design and planning can all happen faster than they could only a few years ago. That creates extraordinary leverage, but leverage is not the same thing as wisdom.</p><p><em>Unabdicated</em> begins with a simple proposition: the more capable our tools become, the more valuable human judgment becomes. When execution is cheap, the hard questions move upstream. What should we ask? Which answer should we trust? What deserves attention? What are we willing to be responsible for?</p><p>The book is about becoming AI-native without becoming intellectually dependent. It explores how to use powerful systems while retaining curiosity, taste, context, responsibility and the ability to form intent independently.</p><p>This is not an argument against AI. It is an argument for a more demanding relationship with it, one in which machines expand human capability without quietly replacing human authorship of the goals.</p></div>
+  </div>
+</section>
+<section class="site-section" aria-labelledby="questions-title">
+  <div class="site-container">
+    <div class="site-section__head"><p class="site-overline"><span class="site-overline__index">01</span>The questions</p><h2 class="site-section__title" id="questions-title">Four questions the book <strong>keeps asking</strong>.</h2></div>
+    <ul class="site-grid site-grid--four"><li><div class="ods-card"><div class="site-card-body"><p class="site-overline">Intent</p><h3 class="ods-card__title">Who chooses the objective?</h3><p>When execution becomes abundant, the quality of the goal becomes a primary constraint.</p></div></div></li><li><div class="ods-card"><div class="site-card-body"><p class="site-overline">Judgment</p><h3 class="ods-card__title">What deserves belief?</h3><p>AI can produce answers at scale. Humans still need standards for deciding which answers deserve trust.</p></div></div></li><li><div class="ods-card"><div class="site-card-body"><p class="site-overline">Agency</p><h3 class="ods-card__title">What should remain yours?</h3><p>Convenience can become abdication when tools begin making choices we have stopped examining.</p></div></div></li><li><div class="ods-card"><div class="site-card-body"><p class="site-overline">Creativity</p><h3 class="ods-card__title">What are you bringing?</h3><p>Originality increasingly depends on perspective, taste, synthesis and the quality of the questions behind the output.</p></div></div></li></ul>
+  </div>
+</section>
+
+<section class="site-section site-section--tight" aria-labelledby="for-title">
+  <div class="site-container site-split">
+    <div class="site-split__aside site-stack">
+      <p class="site-overline"><span class="site-overline__index">02</span>Who it is for</p>
+      <h2 class="site-section__title" id="for-title">For people who intend to use AI <strong>seriously</strong>.</h2>
+    </div>
+    <div class="site-prose">
       <p><em>Unabdicated</em> is being written for people who intend to use AI seriously: builders, operators, creators, founders, professionals and curious people who want the leverage of new tools without becoming passive users of them.</p>
       <p>The goal is practical rather than nostalgic. The future will not reward people for avoiding AI. It will reward people who can combine machine capability with stronger human judgment.</p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="page-cta dark-cta">
-    <p class="section-label">STATUS</p>
-    <h2>Launching 12 November 2026.</h2>
-    <p>The first edition is in platform-proof preparation. The direct pre-order checkout is now available as a live preview while payment-provider verification is completed.</p>
-    <div class="actions"><a class="button primary" href="/unabdicated/preorder.html">Preview pre-order options</a><a class="button light-button" href="/writing/">Read related ideas</a></div>
-  </section>
+<section class="site-section" aria-labelledby="status-title">
+  <div class="site-container">
+    <div class="ods-card site-manifesto" data-variant="inverse">
+      <p class="site-overline">Status</p>
+      <h2 class="site-quote" id="status-title">Launching <strong>12 November 2026</strong>.</h2>
+      <p class="site-lede">The first edition is in platform-proof preparation. The direct pre-order checkout is now available as a live preview while payment-provider verification is completed.</p>
+      <div class="site-actions"><a class="ods-button" href="/unabdicated/preorder/"><span class="ods-button__label">Preview pre-order options</span><svg class="ods-button__icon" width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#arrow-right"></use></svg></a></div>
+    </div>
+  </div>
+</section>
 </main>
 
-  <footer>
-    <div><strong>OLASENI OTUSANYA</strong><p>Builder / Writer / Product Thinker</p></div>
-    <p class="footer-note">AFRICA → WORLD</p>
-  </footer>
-  <script src="/script.js?v=20260929-7"></script>
-</body></html>
+<footer class="site-footer">
+  <div class="site-container site-footer__inner">
+    <div class="site-stack site-stack--tight">
+      <p class="site-footer__name">Olaseni Otusanya</p>
+      <p class="site-small">Builder · Writer · Product thinker</p>
+      <p class="site-overline">Africa → World</p>
+    </div>
+    <ul class="site-links" aria-label="Contact and profiles">
+      <li><a class="ods-link" data-variant="standalone" href="mailto:olaseni.otusanya@gmail.com">Email</a></li>
+      <li><a class="ods-link" data-variant="standalone" href="https://wa.me/19852447681" target="_blank" rel="noopener noreferrer">WhatsApp<svg class="ods-link__icon" width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#arrow-up-right"></use></svg><span class="ods-visually-hidden"> (opens in a new tab)</span></a></li>
+      <li><a class="ods-link" data-variant="standalone" href="https://www.linkedin.com/in/olaseniotusanya" target="_blank" rel="noopener noreferrer">LinkedIn<svg class="ods-link__icon" width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#arrow-up-right"></use></svg><span class="ods-visually-hidden"> (opens in a new tab)</span></a></li>
+      <li><a class="ods-link" data-variant="standalone" href="https://github.com/5kodds" target="_blank" rel="noopener noreferrer">GitHub<svg class="ods-link__icon" width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#arrow-up-right"></use></svg><span class="ods-visually-hidden"> (opens in a new tab)</span></a></li>
+    </ul>
+  </div>
+</footer>
+<nav class="ods-bottom-bar site-bottom-bar" data-labels="visible" aria-label="Main"><a class="ods-bottom-bar__item" href="/"><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#house"></use></svg><span class="ods-bottom-bar__label">Home</span></a><a class="ods-bottom-bar__item" href="/about/"><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#user"></use></svg><span class="ods-bottom-bar__label">About</span></a><a class="ods-bottom-bar__item" href="/portfolio/"><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#briefcase"></use></svg><span class="ods-bottom-bar__label">Work</span></a><a class="ods-bottom-bar__item" href="/writing/"><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#pen-line"></use></svg><span class="ods-bottom-bar__label">Writing</span></a><a class="ods-bottom-bar__item" href="/unabdicated/" aria-current="page"><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#book-open"></use></svg><span class="ods-bottom-bar__label">Book</span></a></nav>
+<script src="/assets/site.js?v=20261120"></script>
+</body>
+</html>

@@ -1,78 +1,150 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="theme-color" content="#F5F2EA" /><meta name="author" content="Olaseni Otusanya" />
-<meta name="description" content="How Olaseni Otusanya designed Parfum Agente, a privacy-first fragrance discovery MVP with a 12-question quiz and rule-based Scent DNA ranking." /><meta name="robots" content="index,follow,max-image-preview:large" />
-<meta property="og:type" content="article" /><meta property="og:site_name" content="Olaseni Otusanya" />
-<meta property="og:title" content="Parfum Agente: Technical Product Case Study" /><meta property="og:description" content="How Olaseni Otusanya designed Parfum Agente, a privacy-first fragrance discovery MVP with a 12-question quiz and rule-based Scent DNA ranking." />
-<meta property="og:url" content="https://olaseniotusanya.site/portfolio/parfum-agente/" /><meta property="og:image" content="https://olaseniotusanya.site/assets/olaseni-og-1200x630.jpg" />
-<meta name="twitter:card" content="summary_large_image" />
-<link rel="canonical" href="https://olaseniotusanya.site/portfolio/parfum-agente/" /><link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-<link rel="stylesheet" href="/styles.css?v=20260929-6" />
-<link rel="stylesheet" href="/portfolio/portfolio.css?v=20261019" />
-<title>Parfum Agente: Technical Product Case Study | Olaseni Otusanya</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script>try{var m=localStorage.getItem('ods-mode');if(m==='light'||m==='dark')document.documentElement.setAttribute('data-ods-mode',m)}catch(e){}</script>
+  <meta name="author" content="Olaseni Otusanya" />
+  <meta name="description" content="How Olaseni Otusanya designed Parfum Agente, a privacy-first fragrance discovery MVP with a 12-question quiz and rule-based Scent DNA ranking." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Olaseni Otusanya" />
+  <meta property="og:title" content="Parfum Agente: Technical Product Case Study" />
+  <meta property="og:description" content="How Olaseni Otusanya designed Parfum Agente, a privacy-first fragrance discovery MVP with a 12-question quiz and rule-based Scent DNA ranking." />
+  <meta property="og:url" content="https://olaseniotusanya.site/portfolio/parfum-agente/" />
+  <meta property="og:image" content="https://olaseniotusanya.site/assets/olaseni-og-1200x630.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://olaseniotusanya.site/portfolio/parfum-agente/" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <title>Parfum Agente: Technical Product Case Study | Olaseni Otusanya</title>
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#F3F2EE" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0E0F12" media="(prefers-color-scheme: dark)" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@300..700&amp;family=JetBrains+Mono:wght@400..600&amp;display=swap" />
+  <link rel="stylesheet" href="/assets/ods/ods-tokens.css?v=0.1.0" />
+  <link rel="stylesheet" href="/assets/ods/ods.min.css?v=0.1.0" />
+  <link rel="stylesheet" href="/assets/site.css?v=20261120" />
 </head>
-<body class="interior-page portfolio-page"><header class="site-header">
-  <a class="nameplate" href="/" aria-label="Olaseni Otusanya home">OLASENI <span>OTUSANYA</span></a>
-  <nav class="desktop-nav" aria-label="Primary navigation">
-    <a href="/about/">About</a><a href="/#building">Building</a><a href="/portfolio/" aria-current="page">Portfolio</a><a href="/writing/">Writing</a><a href="/#contact">Contact</a>
-  </nav>
-  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open navigation"><span></span><span></span></button>
+<body>
+
+<a class="ods-button site-skip" data-variant="inverse" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="site-container site-header__inner">
+    <a class="site-brand" href="/"><span class="ods-avatar" data-size="sm"><img src="/assets/olaseni-profile.jpg" alt="" width="240" height="300" /></span>Olaseni Otusanya</a>
+    <div class="site-header__end">
+      <nav class="site-nav" aria-label="Main"><a class="site-nav__item" href="/about/">About</a><a class="site-nav__item" href="/portfolio/" aria-current="true">Work</a><a class="site-nav__item" href="/writing/">Writing</a><a class="site-nav__item" href="/unabdicated/">Book</a><a class="site-nav__item" href="/#contact">Contact</a></nav>
+      <a class="ods-icon-button site-header__mail" href="mailto:olaseni.otusanya@gmail.com" aria-label="Email Olaseni"><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#mail"></use></svg></a>
+      <button class="ods-icon-button site-mode-toggle" type="button" data-mode-toggle aria-label="Switch colour mode"><svg class="site-icon-moon" width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#moon"></use></svg><svg class="site-icon-sun" width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#sun"></use></svg></button>
+    </div>
+  </div>
 </header>
-<nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
-  <a href="/about/">About</a><a href="/#building">Building</a><a href="/portfolio/">Portfolio</a><a href="/writing/">Writing</a><a href="/#contact">Contact</a>
-</nav>
-<main>
-<section class="page-hero portfolio-hero detail-hero">
- <p class="eyebrow"><a href="/portfolio/">PORTFOLIO</a> / 02 / PRODUCT BUILDING</p>
- <h1>Parfum Agente: designing a better way to discover your scent.</h1>
- <p class="page-dek">A technical product case study in reducing choice overload through a structured consultation, explainable ranking and a privacy-first architecture.</p>
- <div class="portfolio-tags"><span>PRODUCT DISCOVERY</span><span>PERSONALIZATION</span><span>RULE-BASED RECOMMENDATIONS</span><span>PROTOTYPING</span></div>
- <div class="case-meta"><div><span>PRODUCT</span><strong>Fragrance discovery</strong></div><div><span>ROLE</span><strong>Independent product builder</strong></div><div><span>VERSION</span><strong>V2.3</strong></div><div><span>MATURITY</span><strong>Testable beta, not validated at scale</strong></div></div>
- <div class="actions"><a class="button primary" href="https://5kodds.github.io/parfum-agente/" target="_blank" rel="noopener noreferrer">Explore live prototype ↗</a><a class="button" href="https://github.com/5kodds/parfum-agente" target="_blank" rel="noopener noreferrer">View source code ↗</a></div>
+
+<main id="main">
+
+<section class="site-hero">
+  <div class="site-container site-stack">
+    <div class="site-hero__copy">
+      <p class="site-overline"><a class="ods-link" href="/portfolio/">Portfolio</a><span aria-hidden="true">/</span>02 / Product building</p>
+      <h1 class="site-page-title">Parfum Agente: designing a better way to <strong>discover your scent</strong>.</h1>
+      <p class="site-lede">A technical product case study in reducing choice overload through a structured consultation, explainable ranking and a privacy-first architecture.</p>
+      <ul class="site-tags" aria-label="Topics"><li>Product discovery</li><li>Personalization</li><li>Rule-based recommendations</li><li>Prototyping</li></ul>
+      <div class="site-actions"><a class="ods-button" href="https://5kodds.github.io/parfum-agente/" target="_blank" rel="noopener noreferrer"><span class="ods-button__label">Explore live prototype</span><svg class="ods-button__icon" width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#arrow-up-right"></use></svg><span class="ods-visually-hidden"> (opens in a new tab)</span></a><a class="ods-button" data-variant="secondary" href="https://github.com/5kodds/parfum-agente" target="_blank" rel="noopener noreferrer"><span class="ods-button__label">View source code</span><svg class="ods-button__icon" width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#arrow-up-right"></use></svg><span class="ods-visually-hidden"> (opens in a new tab)</span></a></div>
+    </div>
+    <div class="ods-card"><dl class="site-facts"><div><dt>Product</dt><dd>Fragrance discovery</dd></div><div><dt>Role</dt><dd>Independent product builder</dd></div><div><dt>Version</dt><dd><span class="site-data">V2.3</span></dd></div><div><dt>Maturity</dt><dd>Testable beta, not validated at scale</dd></div></dl></div>
+  </div>
 </section>
-<section class="page-body case-narrative">
- <div class="section-kicker"><span>01</span> THE PRODUCT HYPOTHESIS</div>
- <div class="case-split"><h2>Fragrance choice is personal, but discovery is often a wall of products.</h2><div class="case-copy">
- <p>Shoppers are asked to choose among brands, notes, seasons, occasions and unfamiliar fragrance families. My hypothesis was that a short, thoughtful consultation could translate personal preferences into useful discovery guidance before a customer knew specific perfume names.</p>
- <p>The product promise was simple: <strong>Your scent, translated.</strong> The key design question became how to make recommendations understandable and testable instead of presenting unexplained scores as certainty.</p>
- </div></div>
+<section class="site-section" aria-labelledby="hypothesis-title">
+  <div class="site-container site-split">
+    <div class="site-split__aside site-stack">
+      <p class="site-overline"><span class="site-overline__index">01</span>The product hypothesis</p>
+      <h2 class="site-section__title" id="hypothesis-title">Fragrance choice is personal, but discovery is often <strong>a wall of products</strong>.</h2>
+    </div>
+    <div class="site-stack"><div class="site-prose"><p>Shoppers are asked to choose among brands, notes, seasons, occasions and unfamiliar fragrance families. My hypothesis was that a short, thoughtful consultation could translate personal preferences into useful discovery guidance before a customer knew specific perfume names.</p><p>The product promise was simple: <strong>Your scent, translated.</strong> The key design question became how to make recommendations understandable and testable instead of presenting unexplained scores as certainty.</p></div></div>
+  </div>
 </section>
-<section class="page-body case-narrative" aria-label="Parfum Agente authentic interface screenshots">
- <div class="section-kicker"><span>02</span> INTERFACE GALLERY</div>
- <p class="case-gallery-intro">The product experience from first impression to the scent consultation and recommendation results. Each capture comes from the public Parfum Agente website, not a redesign mockup.</p>
- <div class="visual-grid three-visuals">
- <figure class="product-visual"><img src="/portfolio/media/parfum-home.png" alt="Parfum Agente homepage and Discover my Scent DNA entry point" width="1500" height="980" loading="lazy" onerror="this.closest('figure').remove()" /><figcaption>01 / INTRODUCTION</figcaption></figure>
- <figure class="product-visual"><img src="/portfolio/media/parfum-quiz.png" alt="Parfum Agente fragrance preference questionnaire" width="1500" height="980" loading="lazy" onerror="this.closest('figure').remove()" /><figcaption>02 / CONSULTATION</figcaption></figure>
- <figure class="product-visual"><img src="/portfolio/media/parfum-results.png" alt="Parfum Agente scent identity results and ranking interface" width="1500" height="980" loading="lazy" onerror="this.closest('figure').remove()" /><figcaption>03 / SCENT DNA RESULT</figcaption></figure>
- </div>
+<section class="site-section site-section--tight" aria-labelledby="gallery-title">
+  <div class="site-container">
+    <div class="site-section__head" data-layout="split"><p class="site-overline"><span class="site-overline__index">02</span>Interface gallery</p><h2 class="site-section__title" id="gallery-title">From first impression to <strong>Scent DNA</strong>.</h2><p class="site-lede">The product experience from first impression to the scent consultation and recommendation results. Each capture comes from the public Parfum Agente website, not a redesign mockup.</p></div>
+    <div class="site-gallery site-gallery--three">
+      <figure class="site-figure"><div class="site-figure__media"><img src="/portfolio/media/parfum-home.png" alt="Parfum Agente homepage and Discover my Scent DNA entry point" width="1500" height="980" loading="lazy" onerror="this.closest('figure').remove()" /></div><figcaption>01 · Introduction</figcaption></figure>
+      <figure class="site-figure"><div class="site-figure__media"><img src="/portfolio/media/parfum-quiz.png" alt="Parfum Agente fragrance preference questionnaire" width="1500" height="980" loading="lazy" onerror="this.closest('figure').remove()" /></div><figcaption>02 · Consultation</figcaption></figure>
+      <figure class="site-figure"><div class="site-figure__media"><img src="/portfolio/media/parfum-results.png" alt="Parfum Agente scent identity results and ranking interface" width="1500" height="980" loading="lazy" onerror="this.closest('figure').remove()" /></div><figcaption>03 · Scent DNA result</figcaption></figure>
+    </div>
+  </div>
 </section>
-<section class="page-body case-narrative">
- <div class="section-kicker"><span>02</span> THE MVP DECISIONS</div>
- <div class="case-steps">
- <article><span class="step-index">01</span><div><h3>Ask enough to learn, but not enough to exhaust.</h3><p>The consultation uses 12 questions to capture preference signals. Users can move backward, see progress, retry and view the result rather than navigating a traditional product catalog first.</p></div></article>
- <article><span class="step-index">02</span><div><h3>Translate answers into a usable preference model.</h3><p>A six-dimensional Scent DNA and an archetype make the preference profile explicit. The local engine combines preference dimensions with fragrance notes, families, occasions and exploration signals to rank matches.</p></div></article>
- <article><span class="step-index">03</span><div><h3>Choose explainable rules before a trained model.</h3><p>The current matcher is rule-based. That keeps recommendations inspectable and avoids a misleading claim that the app has a trained AI personalization model. The curated catalog currently contains 31 fragrance entries.</p></div></article>
- <article><span class="step-index">04</span><div><h3>Keep the experience usable when data providers fail.</h3><p>The static frontend can calculate matches locally without an external API. An optional Cloudflare Worker is designed for external fragrance and commerce enrichment with keys kept off the client. Provider integration and live reliability still require deployment validation.</p></div></article>
- </div>
+<section class="site-section" aria-labelledby="mvp-title">
+  <div class="site-container">
+    <div class="site-section__head"><p class="site-overline"><span class="site-overline__index">03</span>The MVP decisions</p><h2 class="site-section__title" id="mvp-title">Explainable before <strong>clever</strong>.</h2></div>
+    <ol class="site-steps"><li><span class="site-steps__index">01</span><div><h3>Ask enough to learn, but not enough to exhaust.</h3><p>The consultation uses 12 questions to capture preference signals. Users can move backward, see progress, retry and view the result rather than navigating a traditional product catalog first.</p></div></li><li><span class="site-steps__index">02</span><div><h3>Translate answers into a usable preference model.</h3><p>A six-dimensional Scent DNA and an archetype make the preference profile explicit. The local engine combines preference dimensions with fragrance notes, families, occasions and exploration signals to rank matches.</p></div></li><li><span class="site-steps__index">03</span><div><h3>Choose explainable rules before a trained model.</h3><p>The current matcher is rule-based. That keeps recommendations inspectable and avoids a misleading claim that the app has a trained AI personalization model. The curated catalog currently contains 31 fragrance entries.</p></div></li><li><span class="site-steps__index">04</span><div><h3>Keep the experience usable when data providers fail.</h3><p>The static frontend can calculate matches locally without an external API. An optional Cloudflare Worker is designed for external fragrance and commerce enrichment with keys kept off the client. Provider integration and live reliability still require deployment validation.</p></div></li></ol>
+  </div>
 </section>
-<section class="page-body case-narrative">
- <div class="section-kicker"><span>03</span> TRADE-OFFS &amp; ENGINEERING</div>
- <div class="decision-grid">
- <article><span>PRIVACY VS ANALYTICS</span><h3>Local-first by default.</h3><p>Preference scoring runs in the browser. Product analytics and privacy disclosures remain outstanding before a broader production launch.</p></article>
- <article><span>EXPLAINABILITY VS SOPHISTICATION</span><h3>Rules before model complexity.</h3><p>A transparent scoring engine can be benchmarked with expert-reviewed profiles before investing in an opaque learning system.</p></article>
- <article><span>FRESHNESS VS RELIABILITY</span><h3>Separate curated from live.</h3><p>Provider results need validation, normalization and provenance before their scores can be treated as equivalent to the curated catalog.</p></article>
- </div>
+<section class="site-section site-section--tight" aria-label="Parfum Agente at a glance">
+  <div class="site-container">
+    <ul class="site-grid site-grid--stats">
+      <li><section class="ods-card"><div class="ods-stat"><p class="ods-stat__label" aria-hidden="true">Consultation questions</p><p class="ods-stat__value" aria-hidden="true">12</p><p class="ods-visually-hidden">12 consultation questions</p></div></section></li>
+      <li><section class="ods-card"><div class="ods-stat"><p class="ods-stat__label" aria-hidden="true">Scent DNA dimensions</p><p class="ods-stat__value" aria-hidden="true">6</p><p class="ods-visually-hidden">6 preference dimensions in the Scent DNA</p></div></section></li>
+      <li><section class="ods-card"><div class="ods-stat"><p class="ods-stat__label" aria-hidden="true">Curated fragrance entries</p><p class="ods-stat__value" aria-hidden="true">31</p><p class="ods-visually-hidden">31 curated fragrance entries</p></div></section></li>
+      <li><section class="ods-card"><div class="ods-stat"><p class="ods-stat__label" aria-hidden="true">Current version</p><p class="ods-stat__value" aria-hidden="true">V2.3</p><p class="ods-visually-hidden">Current version 2.3</p></div></section></li>
+    </ul>
+  </div>
 </section>
-<section class="page-body case-narrative">
- <div class="section-kicker"><span>04</span> EVIDENCE, LIMITS &amp; NEXT EXPERIMENT</div>
- <div class="case-split"><h2>A working recommendation experience, not yet proof of recommendation quality.</h2><div class="case-copy">
- <p>The repository documents a functioning consultation, local recommendation logic, automated tests, a deployable static frontend and an optional provider architecture. The V2.3 roadmap explicitly describes this as a testable public beta, not a fully production-validated recommendation business.</p>
- <p>The next test is behavioral, not visual: run moderated sessions across fragrance-experience levels, benchmark top matches against expert-reviewed profiles, measure quiz completion, and gather qualitative feedback without capturing answers by default.</p>
- <p class="quiet">No claims of user growth, conversion lift, model accuracy or affiliate revenue are made because those results have not been established.</p>
- <div class="source-links"><a href="https://github.com/5kodds/parfum-agente" target="_blank" rel="noopener noreferrer">Source repository ↗</a><a href="https://github.com/5kodds/parfum-agente/blob/main/docs/ROADMAP.md" target="_blank" rel="noopener noreferrer">V2.3 roadmap ↗</a><a href="https://5kodds.github.io/parfum-agente/" target="_blank" rel="noopener noreferrer">Prototype ↗</a></div>
- </div></div>
+<section class="site-section" aria-labelledby="tradeoffs-title">
+  <div class="site-container">
+    <div class="site-section__head"><p class="site-overline"><span class="site-overline__index">04</span>Trade-offs &amp; engineering</p><h2 class="site-section__title" id="tradeoffs-title">Three deliberate <strong>trade-offs</strong>.</h2></div>
+    <ul class="site-grid site-grid--three"><li><div class="ods-card"><div class="site-card-body"><p class="site-overline">Privacy vs analytics</p><h3 class="ods-card__title">Local-first by default.</h3><p>Preference scoring runs in the browser. Product analytics and privacy disclosures remain outstanding before a broader production launch.</p></div></div></li><li><div class="ods-card"><div class="site-card-body"><p class="site-overline">Explainability vs sophistication</p><h3 class="ods-card__title">Rules before model complexity.</h3><p>A transparent scoring engine can be benchmarked with expert-reviewed profiles before investing in an opaque learning system.</p></div></div></li><li><div class="ods-card"><div class="site-card-body"><p class="site-overline">Freshness vs reliability</p><h3 class="ods-card__title">Separate curated from live.</h3><p>Provider results need validation, normalization and provenance before their scores can be treated as equivalent to the curated catalog.</p></div></div></li></ul>
+  </div>
 </section>
-<section class="page-cta"><p class="section-label">PAIR WITH A COMMERCIAL PRODUCT STORY</p><h2>Technical product judgment meets real-world product operations.</h2>
-<div class="actions"><a class="button primary" href="/portfolio/vuvu/">Read the Vuvu case study →</a><a class="button" href="/portfolio/">All case studies</a></div></section></main><footer><div><strong>OLASENI OTUSANYA</strong><p>Builder / Writer / Product Thinker</p></div><p class="footer-note">AFRICA → WORLD</p></footer><script src="/script.js?v=20260929-7"></script></body></html>
+<section class="site-section" aria-labelledby="evidence-title">
+  <div class="site-container site-split">
+    <div class="site-split__aside site-stack">
+      <p class="site-overline"><span class="site-overline__index">05</span>Evidence, limits &amp; next experiment</p>
+      <h2 class="site-section__title" id="evidence-title">A working recommendation experience, not yet <strong>proof of recommendation quality</strong>.</h2>
+    </div>
+    <div class="site-stack"><div class="site-prose"><p>The repository documents a functioning consultation, local recommendation logic, automated tests, a deployable static frontend and an optional provider architecture. The V2.3 roadmap explicitly describes this as a testable public beta, not a fully production-validated recommendation business.</p><p>The next test is behavioral, not visual: run moderated sessions across fragrance-experience levels, benchmark top matches against expert-reviewed profiles, measure quiz completion, and gather qualitative feedback without capturing answers by default.</p></div>
+<div class="ods-alert" data-variant="info">
+  <div class="ods-alert__content">
+    <p class="ods-alert__title">What is not claimed</p>
+    <p class="ods-alert__body">No claims of user growth, conversion lift, model accuracy or affiliate revenue are made because those results have not been established.</p>
+  </div>
+</div>
+<ul class="site-links">
+  <li><a class="ods-link" data-variant="standalone" href="https://github.com/5kodds/parfum-agente" target="_blank" rel="noopener noreferrer">Source repository<svg class="ods-link__icon" width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#arrow-up-right"></use></svg><span class="ods-visually-hidden"> (opens in a new tab)</span></a></li>
+  <li><a class="ods-link" data-variant="standalone" href="https://github.com/5kodds/parfum-agente/blob/main/docs/ROADMAP.md" target="_blank" rel="noopener noreferrer">V2.3 roadmap<svg class="ods-link__icon" width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#arrow-up-right"></use></svg><span class="ods-visually-hidden"> (opens in a new tab)</span></a></li>
+  <li><a class="ods-link" data-variant="standalone" href="https://5kodds.github.io/parfum-agente/" target="_blank" rel="noopener noreferrer">Prototype<svg class="ods-link__icon" width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#arrow-up-right"></use></svg><span class="ods-visually-hidden"> (opens in a new tab)</span></a></li>
+</ul></div>
+  </div>
+</section>
+<section class="site-section site-section--tight" aria-labelledby="pair-title">
+  <div class="site-container">
+    <div class="ods-card site-cta">
+      <div class="site-stack">
+        <p class="site-overline">Pair with a commercial product story</p>
+        <h2 class="site-section__title" id="pair-title">Technical product judgment meets <strong>real-world product operations</strong>.</h2>
+        <div class="site-actions"><a class="ods-button" href="/portfolio/vuvu/"><span class="ods-button__label">Read the Vuvu case study</span><svg class="ods-button__icon" width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#arrow-right"></use></svg></a><a class="ods-button" data-variant="secondary" href="/portfolio/"><span class="ods-button__label">All case studies</span></a></div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="site-container site-footer__inner">
+    <div class="site-stack site-stack--tight">
+      <p class="site-footer__name">Olaseni Otusanya</p>
+      <p class="site-small">Builder · Writer · Product thinker</p>
+      <p class="site-overline">Africa → World</p>
+    </div>
+    <ul class="site-links" aria-label="Contact and profiles">
+      <li><a class="ods-link" data-variant="standalone" href="mailto:olaseni.otusanya@gmail.com">Email</a></li>
+      <li><a class="ods-link" data-variant="standalone" href="https://wa.me/19852447681" target="_blank" rel="noopener noreferrer">WhatsApp<svg class="ods-link__icon" width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#arrow-up-right"></use></svg><span class="ods-visually-hidden"> (opens in a new tab)</span></a></li>
+      <li><a class="ods-link" data-variant="standalone" href="https://www.linkedin.com/in/olaseniotusanya" target="_blank" rel="noopener noreferrer">LinkedIn<svg class="ods-link__icon" width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#arrow-up-right"></use></svg><span class="ods-visually-hidden"> (opens in a new tab)</span></a></li>
+      <li><a class="ods-link" data-variant="standalone" href="https://github.com/5kodds" target="_blank" rel="noopener noreferrer">GitHub<svg class="ods-link__icon" width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#arrow-up-right"></use></svg><span class="ods-visually-hidden"> (opens in a new tab)</span></a></li>
+    </ul>
+  </div>
+</footer>
+<nav class="ods-bottom-bar site-bottom-bar" data-labels="visible" aria-label="Main"><a class="ods-bottom-bar__item" href="/"><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#house"></use></svg><span class="ods-bottom-bar__label">Home</span></a><a class="ods-bottom-bar__item" href="/about/"><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#user"></use></svg><span class="ods-bottom-bar__label">About</span></a><a class="ods-bottom-bar__item" href="/portfolio/" aria-current="true"><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#briefcase"></use></svg><span class="ods-bottom-bar__label">Work</span></a><a class="ods-bottom-bar__item" href="/writing/"><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#pen-line"></use></svg><span class="ods-bottom-bar__label">Writing</span></a><a class="ods-bottom-bar__item" href="/unabdicated/"><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#book-open"></use></svg><span class="ods-bottom-bar__label">Book</span></a></nav>
+<script src="/assets/site.js?v=20261120"></script>
+</body>
+</html>

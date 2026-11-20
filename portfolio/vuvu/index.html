@@ -1,80 +1,160 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="theme-color" content="#F5F2EA" /><meta name="author" content="Olaseni Otusanya" />
-<meta name="description" content="How Olaseni Otusanya contributed to Vuvu's bill-payment MVP, from requirements and release planning to QA, testing and learning from live usage." /><meta name="robots" content="index,follow,max-image-preview:large" />
-<meta property="og:type" content="article" /><meta property="og:site_name" content="Olaseni Otusanya" />
-<meta property="og:title" content="Vuvu: Fintech Product Management Case Study" /><meta property="og:description" content="How Olaseni Otusanya contributed to Vuvu's bill-payment MVP, from requirements and release planning to QA, testing and learning from live usage." />
-<meta property="og:url" content="https://olaseniotusanya.site/portfolio/vuvu/" /><meta property="og:image" content="https://olaseniotusanya.site/assets/olaseni-og-1200x630.jpg" />
-<meta name="twitter:card" content="summary_large_image" />
-<link rel="canonical" href="https://olaseniotusanya.site/portfolio/vuvu/" /><link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-<link rel="stylesheet" href="/styles.css?v=20260929-6" />
-<link rel="stylesheet" href="/portfolio/portfolio.css?v=20261019" />
-<title>Vuvu: Fintech Product Management Case Study | Olaseni Otusanya</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script>try{var m=localStorage.getItem('ods-mode');if(m==='light'||m==='dark')document.documentElement.setAttribute('data-ods-mode',m)}catch(e){}</script>
+  <meta name="author" content="Olaseni Otusanya" />
+  <meta name="description" content="How Olaseni Otusanya contributed to Vuvu's bill-payment MVP, from requirements and release planning to QA, testing and learning from live usage." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Olaseni Otusanya" />
+  <meta property="og:title" content="Vuvu: Fintech Product Management Case Study" />
+  <meta property="og:description" content="How Olaseni Otusanya contributed to Vuvu's bill-payment MVP, from requirements and release planning to QA, testing and learning from live usage." />
+  <meta property="og:url" content="https://olaseniotusanya.site/portfolio/vuvu/" />
+  <meta property="og:image" content="https://olaseniotusanya.site/assets/olaseni-og-1200x630.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://olaseniotusanya.site/portfolio/vuvu/" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <title>Vuvu: Fintech Product Management Case Study | Olaseni Otusanya</title>
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#F3F2EE" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0E0F12" media="(prefers-color-scheme: dark)" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@300..700&amp;family=JetBrains+Mono:wght@400..600&amp;display=swap" />
+  <link rel="stylesheet" href="/assets/ods/ods-tokens.css?v=0.1.0" />
+  <link rel="stylesheet" href="/assets/ods/ods.min.css?v=0.1.0" />
+  <link rel="stylesheet" href="/assets/site.css?v=20261120" />
 </head>
-<body class="interior-page portfolio-page"><header class="site-header">
-  <a class="nameplate" href="/" aria-label="Olaseni Otusanya home">OLASENI <span>OTUSANYA</span></a>
-  <nav class="desktop-nav" aria-label="Primary navigation">
-    <a href="/about/">About</a><a href="/#building">Building</a><a href="/portfolio/" aria-current="page">Portfolio</a><a href="/writing/">Writing</a><a href="/#contact">Contact</a>
-  </nav>
-  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open navigation"><span></span><span></span></button>
+<body>
+
+<a class="ods-button site-skip" data-variant="inverse" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="site-container site-header__inner">
+    <a class="site-brand" href="/"><span class="ods-avatar" data-size="sm"><img src="/assets/olaseni-profile.jpg" alt="" width="240" height="300" /></span>Olaseni Otusanya</a>
+    <div class="site-header__end">
+      <nav class="site-nav" aria-label="Main"><a class="site-nav__item" href="/about/">About</a><a class="site-nav__item" href="/portfolio/" aria-current="true">Work</a><a class="site-nav__item" href="/writing/">Writing</a><a class="site-nav__item" href="/unabdicated/">Book</a><a class="site-nav__item" href="/#contact">Contact</a></nav>
+      <a class="ods-icon-button site-header__mail" href="mailto:olaseni.otusanya@gmail.com" aria-label="Email Olaseni"><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#mail"></use></svg></a>
+      <button class="ods-icon-button site-mode-toggle" type="button" data-mode-toggle aria-label="Switch colour mode"><svg class="site-icon-moon" width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#moon"></use></svg><svg class="site-icon-sun" width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#sun"></use></svg></button>
+    </div>
+  </div>
 </header>
-<nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
-  <a href="/about/">About</a><a href="/#building">Building</a><a href="/portfolio/">Portfolio</a><a href="/writing/">Writing</a><a href="/#contact">Contact</a>
-</nav>
-<main>
-<section class="page-hero portfolio-hero detail-hero">
- <p class="eyebrow"><a href="/portfolio/">PORTFOLIO</a> / 01 / FINTECH</p>
- <h1>Vuvu: shipping a payments product, then learning from reality.</h1>
- <p class="page-dek">From structured payment journeys and MVP planning to release readiness, internal testing and observations from live product use.</p>
- <div class="portfolio-tags"><span>PRODUCT OPERATIONS</span><span>FINTECH</span><span>PRDs &amp; QA</span><span>RELEASE DELIVERY</span></div>
- <div class="case-meta"><div><span>ORGANIZATION</span><strong>Baniri Technologies</strong></div><div><span>ROLE</span><strong>Product Operations Manager</strong></div><div><span>PERIOD</span><strong>Sep 2024 to Sep 2025</strong></div><div><span>PRODUCT</span><strong>Consumer bill payment</strong></div></div>
+
+<main id="main">
+
+<section class="site-hero">
+  <div class="site-container site-stack">
+    <div class="site-hero__copy">
+      <p class="site-overline"><a class="ods-link" href="/portfolio/">Portfolio</a><span aria-hidden="true">/</span>01 / Fintech</p>
+      <h1 class="site-page-title">Vuvu: shipping a payments product, then <strong>learning from reality</strong>.</h1>
+      <p class="site-lede">From structured payment journeys and MVP planning to release readiness, internal testing and observations from live product use.</p>
+      <ul class="site-tags" aria-label="Topics"><li>Product operations</li><li>Fintech</li><li>PRDs &amp; QA</li><li>Release delivery</li></ul>
+      
+    </div>
+    <div class="ods-card"><dl class="site-facts"><div><dt>Organization</dt><dd>Baniri Technologies</dd></div><div><dt>Role</dt><dd>Product Operations Manager</dd></div><div><dt>Period</dt><dd>Sep 2024 to Sep 2025</dd></div><div><dt>Product</dt><dd>Consumer bill payment</dd></div></dl></div>
+  </div>
 </section>
-<section class="page-body case-narrative">
- <div class="section-kicker"><span>01</span> THE CONTEXT</div>
- <div class="case-split"><div><h2>Payments have to work outside the demo.</h2></div><div class="case-copy">
- <p>Vuvu was developed as a digital utility and bill-payment platform. The MVP needed to support everyday actions including customer onboarding, airtime and data purchases, electricity and cable-TV payments, payment confirmations and receipts.</p>
- <p>The product challenge was not simply adding features. The team needed coherent user journeys, testable requirements, dependable release processes and a way to learn what users and transactions revealed after launch.</p>
- </div></div>
+<section class="site-section" aria-labelledby="context-title">
+  <div class="site-container site-split">
+    <div class="site-split__aside site-stack">
+      <p class="site-overline"><span class="site-overline__index">01</span>The context</p>
+      <h2 class="site-section__title" id="context-title">Payments have to work <strong>outside the demo</strong>.</h2>
+    </div>
+    <div class="site-stack"><div class="site-prose"><p>Vuvu was developed as a digital utility and bill-payment platform. The MVP needed to support everyday actions including customer onboarding, airtime and data purchases, electricity and cable-TV payments, payment confirmations and receipts.</p><p>The product challenge was not simply adding features. The team needed coherent user journeys, testable requirements, dependable release processes and a way to learn what users and transactions revealed after launch.</p></div></div>
+  </div>
 </section>
-<section class="page-body case-narrative" aria-label="Vuvu original product screens">
- <div class="section-kicker"><span>02</span> THE PRODUCT IN THE WILD</div>
- <div class="visual-grid">
-  <figure class="product-visual app-visual"><img src="/portfolio/media/vuvu-app-01.png" alt="Original Vuvu application interface from the public App Store listing" width="780" height="1400" loading="lazy" onerror="this.onerror=null;this.src='https://vuvu.ng/wp-content/uploads/2024/09/iPhone-15-Pro-Mockup-Front-and-Back-View-1.png'" /><figcaption>Vuvu app, public listing capture (official Vuvu marketing image used as fallback)</figcaption></figure>
-  <figure class="product-visual website-visual"><img src="/portfolio/media/vuvu-website.png" alt="High-resolution browser capture of Vuvu's public marketing website" width="1500" height="980" loading="lazy" onerror="this.closest('figure').remove()" /><figcaption>Vuvu website, public-facing product presentation</figcaption></figure>
- </div>
- <div class="vuvu-extra-screens">
-  <figure class="product-visual"><a href="/portfolio/media/vuvu-app-02.png" target="_blank" rel="noopener noreferrer"><img src="/portfolio/media/vuvu-app-02.png" alt="Original Vuvu app screenshot 2 from the Apple public listing" loading="lazy" width="780" height="1400" /></a><figcaption>Vuvu / app screenshot 02</figcaption></figure>
-  <figure class="product-visual"><a href="/portfolio/media/vuvu-app-03.png" target="_blank" rel="noopener noreferrer"><img src="/portfolio/media/vuvu-app-03.png" alt="Original Vuvu app screenshot 3 from the Apple public listing" loading="lazy" width="780" height="1400" /></a><figcaption>Vuvu / app screenshot 03</figcaption></figure>
- </div>
- <p class="quiet">Visuals are sourced from Apple's public Vuvu app listing and its official website. They represent historical product screens and may reflect earlier versions.</p>
+<section class="site-section site-section--tight" aria-labelledby="wild-title">
+  <div class="site-container">
+    <div class="site-section__head"><p class="site-overline"><span class="site-overline__index">02</span>The product in the wild</p><h2 class="site-section__title" id="wild-title">Publicly distributed <strong>software</strong>.</h2></div>
+    <div class="site-stack">
+      <div class="site-gallery site-gallery--two">
+        <figure class="site-figure"><div class="site-figure__media"><img src="/portfolio/media/vuvu-app-01.png" alt="Original Vuvu application interface from the public App Store listing" width="222" height="480" loading="lazy" onerror="this.onerror=null;this.src='https://vuvu.ng/wp-content/uploads/2024/09/iPhone-15-Pro-Mockup-Front-and-Back-View-1.png'" /></div><figcaption>Vuvu app · public listing capture</figcaption></figure>
+        <figure class="site-figure"><div class="site-figure__media"><img src="/portfolio/media/vuvu-website.png" alt="High-resolution browser capture of Vuvu’s public marketing website" width="1500" height="980" loading="lazy" onerror="this.closest('figure').remove()" /></div><figcaption>Vuvu website · public-facing product presentation</figcaption></figure>
+      </div>
+      <div class="site-gallery site-gallery--pair">
+        <figure class="site-figure"><a href="/portfolio/media/vuvu-app-02.png" target="_blank" rel="noopener noreferrer"><img src="/portfolio/media/vuvu-app-02.png" alt="Original Vuvu app screenshot 2 from the Apple public listing" loading="lazy" width="222" height="480" /><span class="ods-visually-hidden"> (opens full size in a new tab)</span></a><figcaption>Vuvu · app screenshot 02</figcaption></figure>
+        <figure class="site-figure"><a href="/portfolio/media/vuvu-app-03.png" target="_blank" rel="noopener noreferrer"><img src="/portfolio/media/vuvu-app-03.png" alt="Original Vuvu app screenshot 3 from the Apple public listing" loading="lazy" width="222" height="480" /><span class="ods-visually-hidden"> (opens full size in a new tab)</span></a><figcaption>Vuvu · app screenshot 03</figcaption></figure>
+      </div>
+      <p class="site-small">Visuals are sourced from Apple’s public Vuvu app listing and its official website. They represent historical product screens and may reflect earlier versions.</p>
+    </div>
+  </div>
 </section>
-<section class="page-body case-narrative">
- <div class="section-kicker"><span>02</span> MY CONTRIBUTION</div>
- <div class="case-steps">
-  <article><span class="step-index">01</span><div><h3>Translate product scope into buildable journeys.</h3><p>I worked on PRDs, user flows, user stories and acceptance criteria covering the onboarding and payment flows. This gave design, engineering and operations a shared definition of what the initial product needed to do.</p></div></article>
-  <article><span class="step-index">02</span><div><h3>Prioritize a useful MVP and coordinate delivery.</h3><p>I participated in backlog prioritization, milestone alignment and coordination across stakeholders and engineering. The emphasis was a shippable core experience, followed by iteration as the product matured.</p></div></article>
-  <article><span class="step-index">03</span><div><h3>Test before and after launch.</h3><p>Structured QA and user acceptance testing were part of release readiness. The team also launched while development continued, used organic promotion and examined how transactions behaved under real operating conditions.</p></div></article>
-  <article><span class="step-index">04</span><div><h3>Use observations to inform the next decision.</h3><p>We analyzed observed product behavior, including transaction-value scenarios, to identify issues worth investigating. The specific incident, root cause and resolution are not documented here, so I do not present a fabricated technical fix.</p></div></article>
- </div>
+<section class="site-section" aria-labelledby="contribution-title">
+  <div class="site-container">
+    <div class="site-section__head"><p class="site-overline"><span class="site-overline__index">03</span>My contribution</p><h2 class="site-section__title" id="contribution-title">From scope to <strong>shipped and tested</strong>.</h2></div>
+    <ol class="site-steps"><li><span class="site-steps__index">01</span><div><h3>Translate product scope into buildable journeys.</h3><p>I worked on PRDs, user flows, user stories and acceptance criteria covering the onboarding and payment flows. This gave design, engineering and operations a shared definition of what the initial product needed to do.</p></div></li><li><span class="site-steps__index">02</span><div><h3>Prioritize a useful MVP and coordinate delivery.</h3><p>I participated in backlog prioritization, milestone alignment and coordination across stakeholders and engineering. The emphasis was a shippable core experience, followed by iteration as the product matured.</p></div></li><li><span class="site-steps__index">03</span><div><h3>Test before and after launch.</h3><p>Structured QA and user acceptance testing were part of release readiness. The team also launched while development continued, used organic promotion and examined how transactions behaved under real operating conditions.</p></div></li><li><span class="site-steps__index">04</span><div><h3>Use observations to inform the next decision.</h3><p>We analyzed observed product behavior, including transaction-value scenarios, to identify issues worth investigating. The specific incident, root cause and resolution are not documented here, so I do not present a fabricated technical fix.</p></div></li></ol>
+  </div>
 </section>
-<section class="page-body case-narrative">
- <div class="section-kicker"><span>03</span> PRODUCT JUDGMENT</div>
- <div class="case-split"><h2>A launch is the beginning of the learning loop.</h2><div class="case-copy">
- <p>Our approach combined planned QA with learning from live usage. That creates a practical tension in payments: shipping early helps reveal real conditions, while weak reliability can damage trust. Acceptance criteria, transaction testing and clear follow-up priorities help manage that tension.</p>
- <p>My takeaway was to treat quality as an ongoing product responsibility, not a checklist completed once before release.</p>
- </div></div>
- <div class="traction-grid" aria-label="Vuvu product traction"><div><strong>16,000+</strong><span>ACTIVE USERS</span></div><div><strong>₦5m+</strong><span>GROSS DATA PACKAGE SALES</span></div><div><strong>18,000+</strong><span>ANDROID DOWNLOADS RECORDED PUBLICLY</span></div></div>
- <p class="metrics-footnote">The user and sales figures are team-reported historical product results, not independently audited. Data-package sales represent transaction value, not company profit. Android download totals are third-party historical estimates, not a measure of active users. These are overall product results, not individually attributable achievements.</p>
+<section class="site-section" aria-labelledby="judgment-title">
+  <div class="site-container site-stack">
+    <div class="site-split">
+      <div class="site-split__aside site-stack">
+        <p class="site-overline"><span class="site-overline__index">04</span>Product judgment</p>
+        <h2 class="site-section__title" id="judgment-title">A launch is the beginning of the <strong>learning loop</strong>.</h2>
+      </div>
+      <div class="site-prose">
+        <p>Our approach combined planned QA with learning from live usage. That creates a practical tension in payments: shipping early helps reveal real conditions, while weak reliability can damage trust. Acceptance criteria, transaction testing and clear follow-up priorities help manage that tension.</p>
+        <p>My takeaway was to treat quality as an ongoing product responsibility, not a checklist completed once before release.</p>
+      </div>
+    </div>
+    
+<ul class="site-grid site-grid--stats" aria-label="Vuvu product traction">
+  <li><section class="ods-card"><div class="ods-stat"><p class="ods-stat__label" aria-hidden="true">Active users</p><p class="ods-stat__value" aria-hidden="true">16,000<span class="ods-stat__unit">+</span></p><p class="ods-visually-hidden">More than 16,000 active users</p></div></section></li>
+  <li><section class="ods-card"><div class="ods-stat"><p class="ods-stat__label" aria-hidden="true">Gross data-package sales</p><p class="ods-stat__value" aria-hidden="true">₦5m<span class="ods-stat__unit">+</span></p><p class="ods-visually-hidden">More than 5 million naira in gross data-package sales</p></div></section></li>
+  <li><section class="ods-card"><div class="ods-stat"><p class="ods-stat__label" aria-hidden="true">Android downloads recorded publicly</p><p class="ods-stat__value" aria-hidden="true">18,000<span class="ods-stat__unit">+</span></p><p class="ods-visually-hidden">More than 18,000 Android downloads recorded publicly</p></div></section></li>
+</ul>
+<div class="ods-alert" data-variant="info">
+  <div class="ods-alert__content">
+    <p class="ods-alert__title">About these figures</p>
+    <p class="ods-alert__body">The user and sales figures are team-reported historical product results, not independently audited. Data-package sales represent transaction value, not company profit. Android download totals are third-party historical estimates, not a measure of active users. These are overall product results, not individually attributable achievements.</p>
+  </div>
+</div>
+  </div>
 </section>
-<section class="page-body case-narrative">
- <div class="section-kicker"><span>04</span> OUTCOME AND LESSONS</div>
- <div class="case-split"><h2>A real product, a practical delivery story.</h2><div class="case-copy">
- <p>Vuvu progressed beyond a concept into publicly distributed software. My contribution spans requirements, payment journeys, release coordination and testing. The reported 16,000+ active users and over ₦5 million in gross data-package sales demonstrate real-world use of the platform. The most useful next detail to document is a specific transaction investigation, the decision we made, and the observed effect, without exposing confidential customer information.</p>
- <p class="quiet">This is a personal account of my work, not an official statement by Baniri Technologies or Vuvu.</p>
- <div class="source-links"><a href="https://apps.apple.com/ng/app/vuvu/id6738325760" target="_blank" rel="noopener noreferrer">Public app listing ↗</a><a href="https://vuvu.ng/" target="_blank" rel="noopener noreferrer">Vuvu website ↗</a></div>
- </div></div>
+<section class="site-section" aria-labelledby="outcome-title">
+  <div class="site-container site-split">
+    <div class="site-split__aside site-stack">
+      <p class="site-overline"><span class="site-overline__index">05</span>Outcome and lessons</p>
+      <h2 class="site-section__title" id="outcome-title">A real product, a practical <strong>delivery story</strong>.</h2>
+    </div>
+    <div class="site-stack"><div class="site-prose"><p>Vuvu progressed beyond a concept into publicly distributed software. My contribution spans requirements, payment journeys, release coordination and testing. The reported 16,000+ active users and over ₦5 million in gross data-package sales demonstrate real-world use of the platform. The most useful next detail to document is a specific transaction investigation, the decision we made, and the observed effect, without exposing confidential customer information.</p></div>
+<p class="site-small">This is a personal account of my work, not an official statement by Baniri Technologies or Vuvu.</p>
+<ul class="site-links">
+  <li><a class="ods-link" data-variant="standalone" href="https://apps.apple.com/ng/app/vuvu/id6738325760" target="_blank" rel="noopener noreferrer">Public app listing<svg class="ods-link__icon" width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#arrow-up-right"></use></svg><span class="ods-visually-hidden"> (opens in a new tab)</span></a></li>
+  <li><a class="ods-link" data-variant="standalone" href="https://vuvu.ng/" target="_blank" rel="noopener noreferrer">Vuvu website<svg class="ods-link__icon" width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#arrow-up-right"></use></svg><span class="ods-visually-hidden"> (opens in a new tab)</span></a></li>
+</ul></div>
+  </div>
 </section>
-<section class="page-cta"><p class="section-label">NEXT CASE STUDY</p><h2>What changes when the product is yours to design and build?</h2>
-<div class="actions"><a class="button primary" href="/portfolio/parfum-agente/">Explore Parfum Agente →</a><a class="button" href="/portfolio/">All case studies</a></div></section></main><footer><div><strong>OLASENI OTUSANYA</strong><p>Builder / Writer / Product Thinker</p></div><p class="footer-note">AFRICA → WORLD</p></footer><script src="/script.js?v=20260929-7"></script></body></html>
+<section class="site-section site-section--tight" aria-labelledby="next-title">
+  <div class="site-container">
+    <div class="ods-card site-cta">
+      <div class="site-stack">
+        <p class="site-overline">Next case study</p>
+        <h2 class="site-section__title" id="next-title">What changes when the product is <strong>yours to design and build</strong>?</h2>
+        <div class="site-actions"><a class="ods-button" href="/portfolio/parfum-agente/"><span class="ods-button__label">Explore Parfum Agente</span><svg class="ods-button__icon" width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#arrow-right"></use></svg></a><a class="ods-button" data-variant="secondary" href="/portfolio/"><span class="ods-button__label">All case studies</span></a></div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="site-container site-footer__inner">
+    <div class="site-stack site-stack--tight">
+      <p class="site-footer__name">Olaseni Otusanya</p>
+      <p class="site-small">Builder · Writer · Product thinker</p>
+      <p class="site-overline">Africa → World</p>
+    </div>
+    <ul class="site-links" aria-label="Contact and profiles">
+      <li><a class="ods-link" data-variant="standalone" href="mailto:olaseni.otusanya@gmail.com">Email</a></li>
+      <li><a class="ods-link" data-variant="standalone" href="https://wa.me/19852447681" target="_blank" rel="noopener noreferrer">WhatsApp<svg class="ods-link__icon" width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#arrow-up-right"></use></svg><span class="ods-visually-hidden"> (opens in a new tab)</span></a></li>
+      <li><a class="ods-link" data-variant="standalone" href="https://www.linkedin.com/in/olaseniotusanya" target="_blank" rel="noopener noreferrer">LinkedIn<svg class="ods-link__icon" width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#arrow-up-right"></use></svg><span class="ods-visually-hidden"> (opens in a new tab)</span></a></li>
+      <li><a class="ods-link" data-variant="standalone" href="https://github.com/5kodds" target="_blank" rel="noopener noreferrer">GitHub<svg class="ods-link__icon" width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#arrow-up-right"></use></svg><span class="ods-visually-hidden"> (opens in a new tab)</span></a></li>
+    </ul>
+  </div>
+</footer>
+<nav class="ods-bottom-bar site-bottom-bar" data-labels="visible" aria-label="Main"><a class="ods-bottom-bar__item" href="/"><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#house"></use></svg><span class="ods-bottom-bar__label">Home</span></a><a class="ods-bottom-bar__item" href="/about/"><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#user"></use></svg><span class="ods-bottom-bar__label">About</span></a><a class="ods-bottom-bar__item" href="/portfolio/" aria-current="true"><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#briefcase"></use></svg><span class="ods-bottom-bar__label">Work</span></a><a class="ods-bottom-bar__item" href="/writing/"><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#pen-line"></use></svg><span class="ods-bottom-bar__label">Writing</span></a><a class="ods-bottom-bar__item" href="/unabdicated/"><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#book-open"></use></svg><span class="ods-bottom-bar__label">Book</span></a></nav>
+<script src="/assets/site.js?v=20261120"></script>
+</body>
+</html>

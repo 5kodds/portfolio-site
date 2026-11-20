@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script>try{var m=localStorage.getItem('ods-mode');if(m==='light'||m==='dark')document.documentElement.setAttribute('data-ods-mode',m)}catch(e){}</script>
   <meta name="description" content="Meet Olaseni Otusanya, a Nigerian builder and product thinker working across AI, business systems, automation, infrastructure and emerging markets." />
-  <meta name="theme-color" content="#F5F2EA" />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <meta name="author" content="Olaseni Otusanya" />
   <meta property="og:title" content="About Olaseni Otusanya | Builder & Product Thinker" />
@@ -28,74 +28,87 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="manifest" href="/site.webmanifest" />
   <title>About Olaseni Otusanya | Builder & Product Thinker</title>
-  <link rel="stylesheet" href="/styles.css?v=20260929-6" />
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"ProfilePage","mainEntity":{"@type":"Person","name":"Olaseni Otusanya","url":"https://olaseniotusanya.site/","jobTitle":"Builder, Product Thinker and Entrepreneur","sameAs":["https://www.linkedin.com/in/olaseniotusanya","https://github.com/5kodds"]}}
-  </script>
+    {"@context":"https://schema.org","@type":"ProfilePage","mainEntity":{"@type":"Person","name":"Olaseni Otusanya","url":"https://olaseniotusanya.site/","jobTitle":"Builder, Product Thinker and Entrepreneur","sameAs":["https://www.linkedin.com/in/olaseniotusanya","https://github.com/5kodds"]}}
+    </script>
+  <meta name="theme-color" content="#F3F2EE" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0E0F12" media="(prefers-color-scheme: dark)" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@300..700&amp;family=JetBrains+Mono:wght@400..600&amp;display=swap" />
+  <link rel="stylesheet" href="/assets/ods/ods-tokens.css?v=0.1.0" />
+  <link rel="stylesheet" href="/assets/ods/ods.min.css?v=0.1.0" />
+  <link rel="stylesheet" href="/assets/site.css?v=20261120" />
 </head>
-<body class="interior-page">
+<body>
 
-  <header class="site-header">
-    <a class="nameplate" href="/" aria-label="Olaseni Otusanya home">OLASENI <span>OTUSANYA</span></a>
-    <nav class="desktop-nav" aria-label="Primary navigation">
-      <a href="/about/">About</a>
-      <a href="/#building">Building</a>
-      <a href="/#thinking">Thinking</a>
-      <a href="/writing/">Writing</a>
-      <a href="/#contact">Contact</a>
-    </nav>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open navigation">
-      <span></span><span></span>
-    </button>
-  </header>
-  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
-    <a href="/about/">About</a>
-    <a href="/#building">Building</a>
-    <a href="/#thinking">Thinking</a>
-    <a href="/writing/">Writing</a>
-    <a href="/#contact">Contact</a>
-  </nav>
-<main>
-  <section class="page-hero">
-    <p class="eyebrow">ABOUT / OLASENI OTUSANYA</p>
-    <h1>A builder interested in how ideas become useful systems.</h1>
-    <p class="page-dek">My work sits at the intersection of technology, business and the real economy, with Africa as a starting point and the world as the horizon.</p>
-  </section>
-
-  <section class="page-body two-col-story">
-    <aside>
-      <p class="section-label">THE THROUGH-LINE</p>
-      <p class="pull-quote">Different industries. The same question: what does it take to make a system actually work?</p>
-    </aside>
-    <article class="prose">
-      <p>I have never fit neatly into one professional box. I have worked across product development, operations, digital systems, web, automation, entrepreneurship and physical businesses. I have also spent time thinking about sectors such as energy, agriculture and hospitality, not as disconnected interests, but as places where systems, incentives and execution become visible.</p>
-      <p>The recurring pattern is simple: I am drawn to complicated problems, especially the ones sitting between a good idea and reliable execution. I like understanding how the pieces fit together, where friction lives, and what a better operating model could look like.</p>
-      <p>Artificial intelligence has become an important part of that work because it changes what individuals and small teams can build. But I am less interested in AI as spectacle than in what it makes possible: better products, faster learning, more capable operators and new ways to organize work.</p>
-      <p>That interest also creates a second question: as machines become more capable, what remains distinctly human? My writing explores judgment, intent, creativity, responsibility and agency, the capacities that determine not only whether something can be built, but whether it should be built and what it is ultimately for.</p>
-      <p>I build from Africa with a global perspective. That means looking seriously at the region’s infrastructure gaps, fragmented markets and operational constraints while refusing to treat them only as limitations. They are also design conditions, and often the source of unusually valuable opportunities.</p>
-    </article>
-  </section>
-
-  <section class="page-body">
-    <div class="section-kicker"><span>01</span> WHAT I WORK ON</div>
-    <div class="topic-grid">
-      <article><span>AI + PRODUCT</span><h2>Useful technology</h2><p>Products, workflows and automation that turn new capabilities into practical value.</p></article>
-      <article><span>BUSINESS + SYSTEMS</span><h2>Execution</h2><p>Operations, growth, service design and the systems that let an idea survive contact with reality.</p></article>
-      <article><span>AFRICA + INFRASTRUCTURE</span><h2>Emerging markets</h2><p>Energy, agriculture, commerce and the software or financing layers that can make physical systems work better.</p></article>
-      <article><span>HUMAN AGENCY</span><h2>What remains ours</h2><p>Judgment, intent, responsibility and creativity in a world of increasingly capable AI.</p></article>
+<a class="ods-button site-skip" data-variant="inverse" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="site-container site-header__inner">
+    <a class="site-brand" href="/"><span class="ods-avatar" data-size="sm"><img src="/assets/olaseni-profile.jpg" alt="" width="240" height="300" /></span>Olaseni Otusanya</a>
+    <div class="site-header__end">
+      <nav class="site-nav" aria-label="Main"><a class="site-nav__item" href="/about/" aria-current="page">About</a><a class="site-nav__item" href="/portfolio/">Work</a><a class="site-nav__item" href="/writing/">Writing</a><a class="site-nav__item" href="/unabdicated/">Book</a><a class="site-nav__item" href="/#contact">Contact</a></nav>
+      <a class="ods-icon-button site-header__mail" href="mailto:olaseni.otusanya@gmail.com" aria-label="Email Olaseni"><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#mail"></use></svg></a>
+      <button class="ods-icon-button site-mode-toggle" type="button" data-mode-toggle aria-label="Switch colour mode"><svg class="site-icon-moon" width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#moon"></use></svg><svg class="site-icon-sun" width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#sun"></use></svg></button>
     </div>
-  </section>
+  </div>
+</header>
 
-  <section class="page-cta">
-    <p class="section-label">CURRENTLY</p>
-    <h2>Writing <em>Unabdicated</em>, building PolicyPilot, and growing Treeinapool.</h2>
-    <div class="actions"><a class="button primary" href="/unabdicated/">Explore Unabdicated</a><a class="button" href="/#contact">Get in touch</a></div>
-  </section>
+<main id="main">
+
+<section class="site-hero">
+  <div class="site-container">
+    <div class="site-hero__copy">
+      <p class="site-overline">About / Olaseni Otusanya</p>
+      <h1 class="site-page-title">A builder interested in how ideas become <strong>useful systems</strong>.</h1>
+      <p class="site-lede">My work sits at the intersection of technology, business and the real economy, with Africa as a starting point and the world as the horizon.</p>
+    </div>
+  </div>
+</section>
+<section class="site-section site-section--tight" aria-labelledby="through-line">
+  <div class="site-container site-split">
+    <div class="site-split__aside site-stack site-stack--tight">
+      <p class="site-overline" id="through-line">The through-line</p>
+      <p class="site-subtitle">Different industries. The same question: what does it take to make a system actually work?</p>
+    </div>
+    <div class="site-prose"><p>I have never fit neatly into one professional box. I have worked across product development, operations, digital systems, web, automation, entrepreneurship and physical businesses. I have also spent time thinking about sectors such as energy, agriculture and hospitality, not as disconnected interests, but as places where systems, incentives and execution become visible.</p><p>The recurring pattern is simple: I am drawn to complicated problems, especially the ones sitting between a good idea and reliable execution. I like understanding how the pieces fit together, where friction lives, and what a better operating model could look like.</p><p>Artificial intelligence has become an important part of that work because it changes what individuals and small teams can build. But I am less interested in AI as spectacle than in what it makes possible: better products, faster learning, more capable operators and new ways to organize work.</p><p>That interest also creates a second question: as machines become more capable, what remains distinctly human? My writing explores judgment, intent, creativity, responsibility and agency, the capacities that determine not only whether something can be built, but whether it should be built and what it is ultimately for.</p><p>I build from Africa with a global perspective. That means looking seriously at the region’s infrastructure gaps, fragmented markets and operational constraints while refusing to treat them only as limitations. They are also design conditions, and often the source of unusually valuable opportunities.</p></div>
+  </div>
+</section>
+<section class="site-section" aria-labelledby="work-on-title">
+  <div class="site-container">
+    <div class="site-section__head"><p class="site-overline"><span class="site-overline__index">01</span>What I work on</p><h2 class="site-section__title" id="work-on-title">Four layers of the <strong>same work</strong>.</h2></div>
+    <ul class="site-grid site-grid--four"><li><div class="ods-card"><div class="site-card-body"><p class="site-overline">AI + Product</p><h3 class="ods-card__title">Useful technology</h3><p>Products, workflows and automation that turn new capabilities into practical value.</p></div></div></li><li><div class="ods-card"><div class="site-card-body"><p class="site-overline">Business + Systems</p><h3 class="ods-card__title">Execution</h3><p>Operations, growth, service design and the systems that let an idea survive contact with reality.</p></div></div></li><li><div class="ods-card"><div class="site-card-body"><p class="site-overline">Africa + Infrastructure</p><h3 class="ods-card__title">Emerging markets</h3><p>Energy, agriculture, commerce and the software or financing layers that can make physical systems work better.</p></div></div></li><li><div class="ods-card"><div class="site-card-body"><p class="site-overline">Human agency</p><h3 class="ods-card__title">What remains ours</h3><p>Judgment, intent, responsibility and creativity in a world of increasingly capable AI.</p></div></div></li></ul>
+  </div>
+</section>
+<section class="site-section site-section--tight" aria-labelledby="currently-title">
+  <div class="site-container">
+    <div class="ods-card site-cta">
+      <div class="site-stack">
+        <p class="site-overline">Currently</p>
+        <h2 class="site-section__title" id="currently-title">Writing <em>Unabdicated</em>, building PolicyPilot, and <strong>growing Treeinapool</strong>.</h2>
+        <div class="site-actions"><a class="ods-button" href="/unabdicated/"><span class="ods-button__label">Explore Unabdicated</span></a><a class="ods-button" data-variant="secondary" href="/#contact"><span class="ods-button__label">Get in touch</span></a></div>
+      </div>
+    </div>
+  </div>
+</section>
 </main>
 
-  <footer>
-    <div><strong>OLASENI OTUSANYA</strong><p>Builder / Writer / Product Thinker</p></div>
-    <p class="footer-note">AFRICA → WORLD</p>
-  </footer>
-  <script src="/script.js?v=20260929-7"></script>
-</body></html>
+<footer class="site-footer">
+  <div class="site-container site-footer__inner">
+    <div class="site-stack site-stack--tight">
+      <p class="site-footer__name">Olaseni Otusanya</p>
+      <p class="site-small">Builder · Writer · Product thinker</p>
+      <p class="site-overline">Africa → World</p>
+    </div>
+    <ul class="site-links" aria-label="Contact and profiles">
+      <li><a class="ods-link" data-variant="standalone" href="mailto:olaseni.otusanya@gmail.com">Email</a></li>
+      <li><a class="ods-link" data-variant="standalone" href="https://wa.me/19852447681" target="_blank" rel="noopener noreferrer">WhatsApp<svg class="ods-link__icon" width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#arrow-up-right"></use></svg><span class="ods-visually-hidden"> (opens in a new tab)</span></a></li>
+      <li><a class="ods-link" data-variant="standalone" href="https://www.linkedin.com/in/olaseniotusanya" target="_blank" rel="noopener noreferrer">LinkedIn<svg class="ods-link__icon" width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#arrow-up-right"></use></svg><span class="ods-visually-hidden"> (opens in a new tab)</span></a></li>
+      <li><a class="ods-link" data-variant="standalone" href="https://github.com/5kodds" target="_blank" rel="noopener noreferrer">GitHub<svg class="ods-link__icon" width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#arrow-up-right"></use></svg><span class="ods-visually-hidden"> (opens in a new tab)</span></a></li>
+    </ul>
+  </div>
+</footer>
+<nav class="ods-bottom-bar site-bottom-bar" data-labels="visible" aria-label="Main"><a class="ods-bottom-bar__item" href="/"><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#house"></use></svg><span class="ods-bottom-bar__label">Home</span></a><a class="ods-bottom-bar__item" href="/about/" aria-current="page"><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#user"></use></svg><span class="ods-bottom-bar__label">About</span></a><a class="ods-bottom-bar__item" href="/portfolio/"><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#briefcase"></use></svg><span class="ods-bottom-bar__label">Work</span></a><a class="ods-bottom-bar__item" href="/writing/"><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#pen-line"></use></svg><span class="ods-bottom-bar__label">Writing</span></a><a class="ods-bottom-bar__item" href="/unabdicated/"><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#book-open"></use></svg><span class="ods-bottom-bar__label">Book</span></a></nav>
+<script src="/assets/site.js?v=20261120"></script>
+</body>
+</html>

@@ -1,6 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="14" fill="#F5F2EA"/>
-  <circle cx="25" cy="32" r="16" fill="none" stroke="#111111" stroke-width="5"/>
-  <circle cx="39" cy="32" r="16" fill="none" stroke="#111111" stroke-width="5"/>
-  <rect x="29" y="48" width="6" height="3" rx="1.5" fill="#2457FF"/>
+  <!-- ODS light: stone canvas #F3F2EE, ink #16181D, violet #5646D4. Dark: graphite #0E0F12, stone-white #F3F2EE, violet #9D8FFF. -->
+  <style>
+    .bg { fill: #F3F2EE } .ink { stroke: #16181D } .accent { fill: #5646D4 }
+    @media (prefers-color-scheme: dark) { .bg { fill: #0E0F12 } .ink { stroke: #F3F2EE } .accent { fill: #9D8FFF } }
+  </style>
+  <rect class="bg" width="64" height="64" rx="18"/>
+  <circle class="ink" cx="25" cy="32" r="16" fill="none" stroke-width="5"/>
+  <circle class="ink" cx="39" cy="32" r="16" fill="none" stroke-width="5"/>
+  <rect class="accent" x="27" y="47" width="10" height="5" rx="2.5"/>
 </svg>

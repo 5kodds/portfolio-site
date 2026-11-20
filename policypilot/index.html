@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script>try{var m=localStorage.getItem('ods-mode');if(m==='light'||m==='dark')document.documentElement.setAttribute('data-ods-mode',m)}catch(e){}</script>
   <meta name="description" content="PolicyPilot is Olaseni Otusanya’s AI-assisted policy analysis prototype for turning dense policy into clearer summaries, obligations, risks and insights." />
-  <meta name="theme-color" content="#F5F2EA" />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <meta name="author" content="Olaseni Otusanya" />
   <meta property="og:title" content="PolicyPilot | AI-Assisted Policy Analysis by Olaseni Otusanya" />
@@ -28,85 +28,98 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="manifest" href="/site.webmanifest" />
   <title>PolicyPilot | AI-Assisted Policy Analysis by Olaseni Otusanya</title>
-  <link rel="stylesheet" href="/styles.css?v=20260929-6" />
-  
   <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"SoftwareApplication",
-    "name":"PolicyPilot",
-    "applicationCategory":"BusinessApplication",
-    "operatingSystem":"Web",
-    "description":"AI-assisted policy analysis for clearer summaries, obligations, risks and actionable insights.",
-    "url":"https://olaseniotusanya.site/policypilot/",
-    "sameAs":"https://5kodds.github.io/policypilot-prototype/",
-    "isAccessibleForFree":true,
-    "creator":{"@type":"Person","name":"Olaseni Otusanya","url":"https://olaseniotusanya.site/"}
-  }
-  </script>
+    {
+      "@context":"https://schema.org",
+      "@type":"SoftwareApplication",
+      "name":"PolicyPilot",
+      "applicationCategory":"BusinessApplication",
+      "operatingSystem":"Web",
+      "description":"AI-assisted policy analysis for clearer summaries, obligations, risks and actionable insights.",
+      "url":"https://olaseniotusanya.site/policypilot/",
+      "sameAs":"https://5kodds.github.io/policypilot-prototype/",
+      "isAccessibleForFree":true,
+      "creator":{"@type":"Person","name":"Olaseni Otusanya","url":"https://olaseniotusanya.site/"}
+    }
+    </script>
+  <meta name="theme-color" content="#F3F2EE" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0E0F12" media="(prefers-color-scheme: dark)" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@300..700&amp;family=JetBrains+Mono:wght@400..600&amp;display=swap" />
+  <link rel="stylesheet" href="/assets/ods/ods-tokens.css?v=0.1.0" />
+  <link rel="stylesheet" href="/assets/ods/ods.min.css?v=0.1.0" />
+  <link rel="stylesheet" href="/assets/site.css?v=20261120" />
 </head>
-<body class="interior-page">
+<body>
 
-  <header class="site-header">
-    <a class="nameplate" href="/" aria-label="Olaseni Otusanya home">OLASENI <span>OTUSANYA</span></a>
-    <nav class="desktop-nav" aria-label="Primary navigation">
-      <a href="/about/">About</a>
-      <a href="/#building">Building</a>
-      <a href="/#thinking">Thinking</a>
-      <a href="/writing/">Writing</a>
-      <a href="/#contact">Contact</a>
-    </nav>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open navigation">
-      <span></span><span></span>
-    </button>
-  </header>
-  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
-    <a href="/about/">About</a>
-    <a href="/#building">Building</a>
-    <a href="/#thinking">Thinking</a>
-    <a href="/writing/">Writing</a>
-    <a href="/#contact">Contact</a>
-  </nav>
-<main>
-  <section class="page-hero">
-    <p class="eyebrow">AI / PRODUCT / PROTOTYPE</p>
-    <h1>PolicyPilot</h1>
-    <p class="page-dek">AI-assisted policy analysis designed to turn dense documents into clearer summaries, obligations, risks and actionable insights.</p>
-    <div class="actions"><a class="button primary" href="https://5kodds.github.io/policypilot-prototype/" target="_blank" rel="noreferrer">Open prototype ↗</a><a class="button" href="/#contact">Discuss the product</a></div>
-  </section>
-
-  <section class="page-body two-col-story">
-    <aside>
-      <p class="section-label">THE PROBLEM</p>
-      <p class="pull-quote">Important policy is often readable in theory and unusable in practice.</p>
-    </aside>
-    <article class="prose">
-      <p>Policies, regulations and institutional documents contain decisions that matter, but the information people actually need is often buried inside long, technical language. The problem is not merely summarization. Different readers need to know different things: what changed, what applies to them, what creates risk and what action is required.</p>
-      <p>PolicyPilot is an exploration of how AI can become a practical interface between dense documents and human decision-making. A user can provide policy text and move from raw language toward clearer summaries, obligations, risks and follow-up questions.</p>
-      <p>The prototype is intentionally focused on comprehension rather than replacing expert judgment. Its purpose is to reduce the friction between reading a document and understanding what deserves attention.</p>
-    </article>
-  </section>
-
-  <section class="page-body">
-    <div class="section-kicker"><span>01</span> PRODUCT LOGIC</div>
-    <div class="topic-grid">
-      <article><span>SUMMARIZE</span><h2>Find the signal</h2><p>Compress long policy language into a clearer explanation without losing the structure of the source.</p></article>
-      <article><span>OBLIGATIONS</span><h2>Identify what matters</h2><p>Surface duties, requirements and responsibilities that may otherwise be easy to miss.</p></article>
-      <article><span>RISK</span><h2>Expose uncertainty</h2><p>Highlight areas that deserve scrutiny, clarification or expert review.</p></article>
-      <article><span>CONVERSATION</span><h2>Ask follow-up questions</h2><p>Move beyond a static summary and interrogate the document around the user's actual context.</p></article>
+<a class="ods-button site-skip" data-variant="inverse" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="site-container site-header__inner">
+    <a class="site-brand" href="/"><span class="ods-avatar" data-size="sm"><img src="/assets/olaseni-profile.jpg" alt="" width="240" height="300" /></span>Olaseni Otusanya</a>
+    <div class="site-header__end">
+      <nav class="site-nav" aria-label="Main"><a class="site-nav__item" href="/about/">About</a><a class="site-nav__item" href="/portfolio/">Work</a><a class="site-nav__item" href="/writing/">Writing</a><a class="site-nav__item" href="/unabdicated/">Book</a><a class="site-nav__item" href="/#contact">Contact</a></nav>
+      <a class="ods-icon-button site-header__mail" href="mailto:olaseni.otusanya@gmail.com" aria-label="Email Olaseni"><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#mail"></use></svg></a>
+      <button class="ods-icon-button site-mode-toggle" type="button" data-mode-toggle aria-label="Switch colour mode"><svg class="site-icon-moon" width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#moon"></use></svg><svg class="site-icon-sun" width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#sun"></use></svg></button>
     </div>
-  </section>
+  </div>
+</header>
 
-  <section class="page-cta">
-    <p class="section-label">CURRENT STATE</p>
-    <h2>PolicyPilot is a working prototype and a product thesis under development.</h2>
-    <div class="actions"><a class="button primary" href="https://5kodds.github.io/policypilot-prototype/" target="_blank" rel="noreferrer">Try the prototype ↗</a><a class="button" href="mailto:olaseni.otusanya@gmail.com?subject=PolicyPilot">Talk about PolicyPilot</a></div>
-  </section>
+<main id="main">
+
+<section class="site-hero">
+  <div class="site-container">
+    <div class="site-hero__copy">
+      <p class="site-overline">AI / Product / Prototype</p>
+      <h1 class="site-page-title"><strong>PolicyPilot</strong></h1>
+      <p class="site-lede">AI-assisted policy analysis designed to turn dense documents into clearer summaries, obligations, risks and actionable insights.</p><div class="site-actions"><a class="ods-button" href="https://5kodds.github.io/policypilot-prototype/" target="_blank" rel="noopener noreferrer"><span class="ods-button__label">Open prototype</span><svg class="ods-button__icon" width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#arrow-up-right"></use></svg><span class="ods-visually-hidden"> (opens in a new tab)</span></a><a class="ods-button" data-variant="secondary" href="/#contact"><span class="ods-button__label">Discuss the product</span></a></div><span class="ods-badge" data-variant="info">Working prototype</span>
+    </div>
+  </div>
+</section>
+<section class="site-section site-section--tight" aria-labelledby="problem">
+  <div class="site-container site-split">
+    <div class="site-split__aside site-stack site-stack--tight">
+      <p class="site-overline" id="problem">The problem</p>
+      <p class="site-subtitle">Important policy is often readable in theory and unusable in practice.</p>
+    </div>
+    <div class="site-prose"><p>Policies, regulations and institutional documents contain decisions that matter, but the information people actually need is often buried inside long, technical language. The problem is not merely summarization. Different readers need to know different things: what changed, what applies to them, what creates risk and what action is required.</p><p>PolicyPilot is an exploration of how AI can become a practical interface between dense documents and human decision-making. A user can provide policy text and move from raw language toward clearer summaries, obligations, risks and follow-up questions.</p><p>The prototype is intentionally focused on comprehension rather than replacing expert judgment. Its purpose is to reduce the friction between reading a document and understanding what deserves attention.</p></div>
+  </div>
+</section>
+<section class="site-section" aria-labelledby="logic-title">
+  <div class="site-container">
+    <div class="site-section__head"><p class="site-overline"><span class="site-overline__index">01</span>Product logic</p><h2 class="site-section__title" id="logic-title">From raw language to <strong>what deserves attention</strong>.</h2></div>
+    <ul class="site-grid site-grid--four"><li><div class="ods-card"><div class="site-card-body"><p class="site-overline">Summarize</p><h3 class="ods-card__title">Find the signal</h3><p>Compress long policy language into a clearer explanation without losing the structure of the source.</p></div></div></li><li><div class="ods-card"><div class="site-card-body"><p class="site-overline">Obligations</p><h3 class="ods-card__title">Identify what matters</h3><p>Surface duties, requirements and responsibilities that may otherwise be easy to miss.</p></div></div></li><li><div class="ods-card"><div class="site-card-body"><p class="site-overline">Risk</p><h3 class="ods-card__title">Expose uncertainty</h3><p>Highlight areas that deserve scrutiny, clarification or expert review.</p></div></div></li><li><div class="ods-card"><div class="site-card-body"><p class="site-overline">Conversation</p><h3 class="ods-card__title">Ask follow-up questions</h3><p>Move beyond a static summary and interrogate the document around the user’s actual context.</p></div></div></li></ul>
+  </div>
+</section>
+<section class="site-section site-section--tight" aria-labelledby="state-title">
+  <div class="site-container">
+    <div class="ods-card site-cta">
+      <div class="site-stack">
+        <p class="site-overline">Current state</p>
+        <h2 class="site-section__title" id="state-title">PolicyPilot is a working prototype and a <strong>product thesis</strong> under development.</h2>
+        <div class="site-actions"><a class="ods-button" href="https://5kodds.github.io/policypilot-prototype/" target="_blank" rel="noopener noreferrer"><span class="ods-button__label">Try the prototype</span><svg class="ods-button__icon" width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#arrow-up-right"></use></svg><span class="ods-visually-hidden"> (opens in a new tab)</span></a><a class="ods-button" data-variant="secondary" href="mailto:olaseni.otusanya@gmail.com?subject=PolicyPilot"><svg class="ods-button__icon" width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#mail"></use></svg><span class="ods-button__label">Talk about PolicyPilot</span></a></div>
+      </div>
+    </div>
+  </div>
+</section>
 </main>
 
-  <footer>
-    <div><strong>OLASENI OTUSANYA</strong><p>Builder / Writer / Product Thinker</p></div>
-    <p class="footer-note">AFRICA → WORLD</p>
-  </footer>
-  <script src="/script.js?v=20260929-7"></script>
-</body></html>
+<footer class="site-footer">
+  <div class="site-container site-footer__inner">
+    <div class="site-stack site-stack--tight">
+      <p class="site-footer__name">Olaseni Otusanya</p>
+      <p class="site-small">Builder · Writer · Product thinker</p>
+      <p class="site-overline">Africa → World</p>
+    </div>
+    <ul class="site-links" aria-label="Contact and profiles">
+      <li><a class="ods-link" data-variant="standalone" href="mailto:olaseni.otusanya@gmail.com">Email</a></li>
+      <li><a class="ods-link" data-variant="standalone" href="https://wa.me/19852447681" target="_blank" rel="noopener noreferrer">WhatsApp<svg class="ods-link__icon" width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#arrow-up-right"></use></svg><span class="ods-visually-hidden"> (opens in a new tab)</span></a></li>
+      <li><a class="ods-link" data-variant="standalone" href="https://www.linkedin.com/in/olaseniotusanya" target="_blank" rel="noopener noreferrer">LinkedIn<svg class="ods-link__icon" width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#arrow-up-right"></use></svg><span class="ods-visually-hidden"> (opens in a new tab)</span></a></li>
+      <li><a class="ods-link" data-variant="standalone" href="https://github.com/5kodds" target="_blank" rel="noopener noreferrer">GitHub<svg class="ods-link__icon" width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#arrow-up-right"></use></svg><span class="ods-visually-hidden"> (opens in a new tab)</span></a></li>
+    </ul>
+  </div>
+</footer>
+<nav class="ods-bottom-bar site-bottom-bar" data-labels="visible" aria-label="Main"><a class="ods-bottom-bar__item" href="/"><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#house"></use></svg><span class="ods-bottom-bar__label">Home</span></a><a class="ods-bottom-bar__item" href="/about/"><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#user"></use></svg><span class="ods-bottom-bar__label">About</span></a><a class="ods-bottom-bar__item" href="/portfolio/"><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#briefcase"></use></svg><span class="ods-bottom-bar__label">Work</span></a><a class="ods-bottom-bar__item" href="/writing/"><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#pen-line"></use></svg><span class="ods-bottom-bar__label">Writing</span></a><a class="ods-bottom-bar__item" href="/unabdicated/"><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#book-open"></use></svg><span class="ods-bottom-bar__label">Book</span></a></nav>
+<script src="/assets/site.js?v=20261120"></script>
+</body>
+</html>

@@ -3,42 +3,65 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script>try{var m=localStorage.getItem('ods-mode');if(m==='light'||m==='dark')document.documentElement.setAttribute('data-ods-mode',m)}catch(e){}</script>
   <meta name="robots" content="noindex" />
-  <meta name="theme-color" content="#F5F2EA" />
   <title>Page not found | Olaseni Otusanya</title>
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="/styles.css?v=20260929-5" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#F3F2EE" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0E0F12" media="(prefers-color-scheme: dark)" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@300..700&amp;family=JetBrains+Mono:wght@400..600&amp;display=swap" />
+  <link rel="stylesheet" href="/assets/ods/ods-tokens.css?v=0.1.0" />
+  <link rel="stylesheet" href="/assets/ods/ods.min.css?v=0.1.0" />
+  <link rel="stylesheet" href="/assets/site.css?v=20261120" />
 </head>
-<body class="interior-page">
+<body>
+
+<a class="ods-button site-skip" data-variant="inverse" href="#main">Skip to content</a>
 <header class="site-header">
-    <a class="nameplate" href="/" aria-label="Olaseni Otusanya home">OLASENI <span>OTUSANYA</span></a>
-    <nav class="desktop-nav" aria-label="Primary navigation">
-      <a href="/about/">About</a>
-      <a href="/#building">Building</a>
-      <a href="/#thinking">Thinking</a>
-      <a href="/writing/">Writing</a>
-      <a href="/#contact">Contact</a>
-    </nav>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open navigation"><span></span><span></span></button>
-  </header>
-  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
-    <a href="/about/">About</a>
-    <a href="/#building">Building</a>
-    <a href="/#thinking">Thinking</a>
-    <a href="/writing/">Writing</a>
-    <a href="/#contact">Contact</a>
-  </nav>
-<main>
-  <section class="page-hero error-page">
-    <p class="eyebrow">404 / NOT FOUND</p>
-    <h1>This page is not here.</h1>
-    <p class="page-dek">The link may be old, or the page may have moved. The useful stuff is still easy to find.</p>
-    <div class="actions"><a class="button primary" href="/">Go home</a><a class="button" href="/writing/">Read the writing</a></div>
-  </section>
+  <div class="site-container site-header__inner">
+    <a class="site-brand" href="/"><span class="ods-avatar" data-size="sm"><img src="/assets/olaseni-profile.jpg" alt="" width="240" height="300" /></span>Olaseni Otusanya</a>
+    <div class="site-header__end">
+      <nav class="site-nav" aria-label="Main"><a class="site-nav__item" href="/about/">About</a><a class="site-nav__item" href="/portfolio/">Work</a><a class="site-nav__item" href="/writing/">Writing</a><a class="site-nav__item" href="/unabdicated/">Book</a><a class="site-nav__item" href="/#contact">Contact</a></nav>
+      <a class="ods-icon-button site-header__mail" href="mailto:olaseni.otusanya@gmail.com" aria-label="Email Olaseni"><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#mail"></use></svg></a>
+      <button class="ods-icon-button site-mode-toggle" type="button" data-mode-toggle aria-label="Switch colour mode"><svg class="site-icon-moon" width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#moon"></use></svg><svg class="site-icon-sun" width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#sun"></use></svg></button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="site-section">
+  <div class="site-container">
+    <div class="ods-empty-state" data-variant="page">
+      <span class="ods-empty-state__visual" aria-hidden="true"><svg width="32" height="32" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#compass"></use></svg></span>
+      <p class="site-overline">404 / Not found</p>
+      <h1 class="ods-empty-state__title">This page is not here.</h1>
+      <p class="ods-empty-state__body">The link may be old, or the page may have moved. The useful stuff is still easy to find.</p>
+      <div class="ods-empty-state__actions"><a class="ods-button" href="/"><span class="ods-button__label">Go home</span></a><a class="ods-button" data-variant="secondary" href="/writing/"><span class="ods-button__label">Read the writing</span></a></div>
+    </div>
+  </div>
+</section>
 </main>
-<footer>
-    <div><strong>OLASENI OTUSANYA</strong><p>Builder / Writer / Product Thinker</p></div>
-    <p class="footer-note">AFRICA → WORLD</p>
-  </footer>
-  <script src="/script.js?v=20260929-7"></script>
-</body></html>
+
+<footer class="site-footer">
+  <div class="site-container site-footer__inner">
+    <div class="site-stack site-stack--tight">
+      <p class="site-footer__name">Olaseni Otusanya</p>
+      <p class="site-small">Builder · Writer · Product thinker</p>
+      <p class="site-overline">Africa → World</p>
+    </div>
+    <ul class="site-links" aria-label="Contact and profiles">
+      <li><a class="ods-link" data-variant="standalone" href="mailto:olaseni.otusanya@gmail.com">Email</a></li>
+      <li><a class="ods-link" data-variant="standalone" href="https://wa.me/19852447681" target="_blank" rel="noopener noreferrer">WhatsApp<svg class="ods-link__icon" width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#arrow-up-right"></use></svg><span class="ods-visually-hidden"> (opens in a new tab)</span></a></li>
+      <li><a class="ods-link" data-variant="standalone" href="https://www.linkedin.com/in/olaseniotusanya" target="_blank" rel="noopener noreferrer">LinkedIn<svg class="ods-link__icon" width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#arrow-up-right"></use></svg><span class="ods-visually-hidden"> (opens in a new tab)</span></a></li>
+      <li><a class="ods-link" data-variant="standalone" href="https://github.com/5kodds" target="_blank" rel="noopener noreferrer">GitHub<svg class="ods-link__icon" width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#arrow-up-right"></use></svg><span class="ods-visually-hidden"> (opens in a new tab)</span></a></li>
+    </ul>
+  </div>
+</footer>
+<nav class="ods-bottom-bar site-bottom-bar" data-labels="visible" aria-label="Main"><a class="ods-bottom-bar__item" href="/"><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#house"></use></svg><span class="ods-bottom-bar__label">Home</span></a><a class="ods-bottom-bar__item" href="/about/"><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#user"></use></svg><span class="ods-bottom-bar__label">About</span></a><a class="ods-bottom-bar__item" href="/portfolio/"><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#briefcase"></use></svg><span class="ods-bottom-bar__label">Work</span></a><a class="ods-bottom-bar__item" href="/writing/"><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#pen-line"></use></svg><span class="ods-bottom-bar__label">Writing</span></a><a class="ods-bottom-bar__item" href="/unabdicated/"><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#book-open"></use></svg><span class="ods-bottom-bar__label">Book</span></a></nav>
+<script src="/assets/site.js?v=20261120"></script>
+</body>
+</html>
