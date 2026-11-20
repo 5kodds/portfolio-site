@@ -105,6 +105,22 @@ main {
   text-decoration: none;
 }
 
+/* The OO mark: two intersecting circles, the same mark as the favicon. */
+.site-brand__mark {
+  inline-size: var(--ods-size-avatar-sm);
+  block-size: var(--ods-size-avatar-sm);
+
+  & circle {
+    fill: none;
+    stroke: currentcolor;
+    stroke-width: 5;
+  }
+
+  & rect {
+    fill: var(--ods-color-action-primary-bg);
+  }
+}
+
 .site-header__end {
   display: flex;
   align-items: center;
